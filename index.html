@@ -53,8 +53,8 @@ nav li a:hover{color:var(--ink)}
 .btn:focus-visible,.tab:focus-visible,.seg button:focus-visible,summary:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 .btn svg{width:20px;height:20px;fill:currentColor}
 /* hero */
-.hero{padding:64px 0 56px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
-@media (max-width:860px){.hero{grid-template-columns:1fr;gap:36px;padding:44px 0 40px}}
+.hero{padding-block:64px 56px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+@media (max-width:860px){.hero{grid-template-columns:1fr;gap:36px;padding-block:44px 40px}}
 .hero .lead{font-size:19px;color:var(--ink-2);margin:20px 0 28px;max-width:32em}
 .hero .sub{font-size:14px;color:var(--ink-3);margin-top:12px}
 /* toggle demo */
@@ -98,7 +98,7 @@ td{color:var(--ink)}
 table{border-collapse:collapse;width:100%;min-width:760px;font-size:14.5px}
 th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}
 th{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:600;background:var(--paper-2)}
-td.num{font-family:"IBM Plex Mono",Consolas,monospace;white-space:nowrap;font-variant-numeric:tabular-nums}
+td.num{font-family:"IBM Plex Mono",Consolas,monospace;font-variant-numeric:tabular-nums}
 .pill{display:inline-block;font-size:12px;font-weight:600;padding:3px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
 .pill.ok{background:color-mix(in srgb,var(--ok) 15%,transparent);color:var(--ok)}
 .pill.warn{background:color-mix(in srgb,var(--warn) 15%,transparent);color:var(--warn)}
@@ -158,8 +158,8 @@ footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;just
     <div class="eyebrow">Проверка сметы против проекта</div>
     <h1>Вы строите по проекту. Платят вам по смете. <em>Разница — ваши деньги.</em></h1>
     <p class="lead">Сверяем каждую позицию сметы с чертежами и находим то, что вам придётся делать бесплатно, — до того, как вы это подписали.</p>
-    <a class="btn" href="https://wa.me/79931500747?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D1%82%D1%8C%20%D1%81%D0%BC%D0%B5%D1%82%D1%83"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.1 5 5 0 0 0 1.1 2.7 11.4 11.4 0 0 0 4.4 3.9c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2 2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg>Прислать проект и смету</a>
-    <p class="sub">Первый взгляд — за день: скажем, есть ли что искать, и назовём стоимость.</p>
+    <a class="btn" href="mailto:zz_realt@mail.ru?subject=%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%20%D1%81%D0%BC%D0%B5%D1%82%D1%8B%20%D0%BF%D1%80%D0%BE%D1%82%D0%B8%D0%B2%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5.%0A%0A%D0%9D%D0%BE%D0%BC%D0%B5%D1%80%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B2%20%D0%95%D0%98%D0%A1%20%28%D0%B8%D0%BB%D0%B8%20%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0%29%3A%20%0A%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%3A%20%0A%D0%A1%D1%82%D0%B0%D0%B4%D0%B8%D1%8F%3A%20%D0%B4%D0%BE%20%D1%82%D0%BE%D1%80%D0%B3%D0%BE%D0%B2%20/%20%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82%20%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%2C%20%D0%B0%D0%BA%D1%82%D0%BE%D0%B2%20%D0%BD%D0%B5%D1%82%20/%20%D0%B0%D0%BA%D1%82%D1%8B%20%D0%B8%D0%B4%D1%83%D1%82%0A%0A%D0%95%D1%81%D0%BB%D0%B8%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BD%D0%B5%20%D1%81%20%D0%B3%D0%BE%D1%81%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%20%E2%80%94%20%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0%20%D0%BD%D0%B0%20%D0%B0%D1%80%D1%85%D0%B8%D0%B2%20%28%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81.%D0%94%D0%B8%D1%81%D0%BA%2C%20%D0%9E%D0%B1%D0%BB%D0%B0%D0%BA%D0%BE%20Mail.ru%29%3A%20%0A%0A%D0%A2%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20%D0%B4%D0%BB%D1%8F%20%D1%81%D0%B2%D1%8F%D0%B7%D0%B8%3A%20"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v14H2z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 6l10 7 10-7" fill="none" stroke="currentColor" stroke-width="2"/></svg>Прислать проект и смету</a>
+    <p class="sub">Достаточно номера закупки — документацию из ЕИС возьмём сами. Первый взгляд — за день: скажем, есть ли что искать, и назовём стоимость.<br>Документация не передаётся третьим лицам и удаляется после работы; NDA — по запросу. Вопрос без файлов — <a href="https://wa.me/79931500747?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D1%82%D1%8C%20%D1%81%D0%BC%D0%B5%D1%82%D1%83" style="color:var(--accent)">в WhatsApp</a>.</p>
   </div>
   <div class="demo" aria-label="Пример: один и тот же объект в проекте и в смете">
     <div class="eyebrow">Живой пример · напорная канализация, закупка 2026</div>
@@ -244,10 +244,10 @@ footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;just
   <div class="eyebrow">Как проходит</div>
   <h2>Четыре шага, из них ваших — один</h2>
   <div class="steps">
-    <div class="step"><h3>Вы присылаете проект и смету</h3><p>Как есть: архив с закупки, папка с объекта, PDF и Excel. Контракт — если уже подписан.</p></div>
+    <div class="step"><h3>Вы присылаете номер закупки</h3><p>Или ссылку на архив, если документация не из ЕИС. На почту — файлы любого размера, ничего не пережимается. Контракт — если уже подписан.</p></div>
     <div class="step"><h3>Первый взгляд — за день</h3><p>Говорим, есть ли что искать, каких томов не хватает, и называем стоимость. Она зависит от объёма сметы.</p></div>
     <div class="step"><h3>Сверка — от двух до пяти дней</h3><p>Каждая позиция сметы против чертежей, спецификаций и ведомостей. Все строки, не выборка.</p></div>
-    <div class="step"><h3>Файл и разбор</h3><p>Таблица расхождений, лист «не проверено», встречный лист и первый ход — с какой позиции начинать разговор с заказчиком.</p></div>
+    <div class="step"><h3>Файл и разбор</h3><p>Таблица расхождений, лист «не проверено», встречный лист и первый ход — с какой позиции начинать разговор с заказчиком. Ваши файлы после этого удаляются.</p></div>
   </div>
 </div></section>
 
@@ -263,6 +263,7 @@ footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;just
 <section id="faq"><div class="wrap">
   <div class="eyebrow">Вопросы, которые задают</div>
   <h2>Коротко и честно</h2>
+  <details><summary>Кто увидит нашу документацию?</summary><p>Только исполнитель проверки. Файлы не передаются третьим лицам, не публикуются и удаляются после сдачи отчёта. Отчёт — ваш: в примерах на этом сайте объект и заказчик не раскрываются, и ваш случай в примеры не попадёт без вашего письменного согласия. По запросу подписываем соглашение о конфиденциальности (NDA) до получения файлов.</p></details>
   <details><summary>Заказчик скажет: «вы видели смету при заключении, возражений не было». Что тогда?</summary><p>Контракт сам предусматривает выявление несоответствий в ходе исполнения и обязывает подрядчика направить акт именно тогда. Механизм, установленный заказчиком, не может быть обращён против того, кто им пользуется. Формулировку проверяем по вашему контракту и даём готовой.</p></details>
   <details><summary>Сколько это стоит?</summary><p>Зависит от объёма сметы и полноты проекта. Первый взгляд — за день: скажем, есть ли смысл, и назовём цену до начала работы. Если искать нечего — так и скажем.</p></details>
   <details><summary>Нужен ли юрист?</summary><p>Для сверки — нет. Результат — факты со ссылками на листы и позиции, и они же — готовое приложение к письму или акту о несоответствии. Юрист нужен, если дело дошло до претензии; тогда у него уже будет вся фактура.</p></details>
@@ -272,13 +273,13 @@ footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;just
 
 <section class="final"><div class="wrap">
   <div class="card">
-    <div><h2>Смета — ваши деньги. Проверьте её до подписи.</h2><p class="muted">Пришлите проект и смету — скажем, что нужно ещё и сколько это займёт.</p></div>
-    <div><a class="btn" href="https://wa.me/79931500747?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D1%82%D1%8C%20%D1%81%D0%BC%D0%B5%D1%82%D1%83"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.1 5 5 0 0 0 1.1 2.7 11.4 11.4 0 0 0 4.4 3.9c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2 2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg>Написать в WhatsApp</a></div>
+    <div><h2>Смета — ваши деньги. Проверьте её до подписи.</h2><p class="muted">Пришлите номер закупки или ссылку на документацию — скажем, что нужно ещё и сколько это займёт.</p></div>
+    <div><a class="btn" href="mailto:zz_realt@mail.ru?subject=%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%20%D1%81%D0%BC%D0%B5%D1%82%D1%8B%20%D0%BF%D1%80%D0%BE%D1%82%D0%B8%D0%B2%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5.%0A%0A%D0%9D%D0%BE%D0%BC%D0%B5%D1%80%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B2%20%D0%95%D0%98%D0%A1%20%28%D0%B8%D0%BB%D0%B8%20%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0%29%3A%20%0A%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%3A%20%0A%D0%A1%D1%82%D0%B0%D0%B4%D0%B8%D1%8F%3A%20%D0%B4%D0%BE%20%D1%82%D0%BE%D1%80%D0%B3%D0%BE%D0%B2%20/%20%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82%20%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%2C%20%D0%B0%D0%BA%D1%82%D0%BE%D0%B2%20%D0%BD%D0%B5%D1%82%20/%20%D0%B0%D0%BA%D1%82%D1%8B%20%D0%B8%D0%B4%D1%83%D1%82%0A%0A%D0%95%D1%81%D0%BB%D0%B8%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BD%D0%B5%20%D1%81%20%D0%B3%D0%BE%D1%81%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%20%E2%80%94%20%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0%20%D0%BD%D0%B0%20%D0%B0%D1%80%D1%85%D0%B8%D0%B2%20%28%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81.%D0%94%D0%B8%D1%81%D0%BA%2C%20%D0%9E%D0%B1%D0%BB%D0%B0%D0%BA%D0%BE%20Mail.ru%29%3A%20%0A%0A%D0%A2%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20%D0%B4%D0%BB%D1%8F%20%D1%81%D0%B2%D1%8F%D0%B7%D0%B8%3A%20"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v14H2z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 6l10 7 10-7" fill="none" stroke="currentColor" stroke-width="2"/></svg>Написать на почту</a></div>
   </div>
-  <footer><div>Сито · проверка сметы против проекта. Строительные подрядчики, госконтракты 44-ФЗ и коммерческие объекты.</div><div>Пример отчёта — реальная закупка 2026 года, объект и заказчик не раскрываются.</div><div>8 (993) 150-07-47 · <a href="mailto:zz_realt@mail.ru">zz_realt@mail.ru</a></div></footer>
+  <footer><div>Сито · проверка сметы против проекта. Строительные подрядчики, госконтракты 44-ФЗ и коммерческие объекты.</div><div>Пример отчёта — реальная закупка 2026 года, объект и заказчик не раскрываются. Конфиденциальность документации клиентов — условие работы.</div><div>8 (993) 150-07-47 · <a href="mailto:zz_realt@mail.ru">zz_realt@mail.ru</a></div></footer>
 </div></section>
 
-<div class="sticky"><a class="btn" href="https://wa.me/79931500747?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D1%82%D1%8C%20%D1%81%D0%BC%D0%B5%D1%82%D1%83">Написать в WhatsApp</a></div>
+<div class="sticky"><a class="btn" href="mailto:zz_realt@mail.ru?subject=%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%20%D1%81%D0%BC%D0%B5%D1%82%D1%8B%20%D0%BF%D1%80%D0%BE%D1%82%D0%B8%D0%B2%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5.%0A%0A%D0%9D%D0%BE%D0%BC%D0%B5%D1%80%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B2%20%D0%95%D0%98%D0%A1%20%28%D0%B8%D0%BB%D0%B8%20%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0%29%3A%20%0A%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%3A%20%0A%D0%A1%D1%82%D0%B0%D0%B4%D0%B8%D1%8F%3A%20%D0%B4%D0%BE%20%D1%82%D0%BE%D1%80%D0%B3%D0%BE%D0%B2%20/%20%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82%20%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%2C%20%D0%B0%D0%BA%D1%82%D0%BE%D0%B2%20%D0%BD%D0%B5%D1%82%20/%20%D0%B0%D0%BA%D1%82%D1%8B%20%D0%B8%D0%B4%D1%83%D1%82%0A%0A%D0%95%D1%81%D0%BB%D0%B8%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BD%D0%B5%20%D1%81%20%D0%B3%D0%BE%D1%81%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%20%E2%80%94%20%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0%20%D0%BD%D0%B0%20%D0%B0%D1%80%D1%85%D0%B8%D0%B2%20%28%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81.%D0%94%D0%B8%D1%81%D0%BA%2C%20%D0%9E%D0%B1%D0%BB%D0%B0%D0%BA%D0%BE%20Mail.ru%29%3A%20%0A%0A%D0%A2%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20%D0%B4%D0%BB%D1%8F%20%D1%81%D0%B2%D1%8F%D0%B7%D0%B8%3A%20">Прислать номер закупки</a></div>
 
 <script>
 (function(){
