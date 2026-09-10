@@ -87,9 +87,13 @@ section{padding:64px 0}
 .tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);margin-bottom:0;overflow-x:auto}
 .tab{border:0;background:transparent;font:inherit;font-weight:600;font-size:15px;padding:12px 14px;color:var(--ink-2);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-1px;white-space:nowrap}
 .tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.band .tab{color:var(--dark-muted)}
+.band .tab[aria-selected="true"]{color:var(--dark-text)}
 .panel{display:none;background:var(--paper);border:1px solid var(--line);border-top:0;border-radius:0 0 10px 10px}
 .panel[data-active]{display:block}
+.panel{color:var(--ink)}
 .panel .cap{padding:14px 18px;font-size:14px;color:var(--ink-2);border-bottom:1px solid var(--line)}
+td{color:var(--ink)}
 .tbl{overflow-x:auto}
 table{border-collapse:collapse;width:100%;min-width:760px;font-size:14.5px}
 th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}
@@ -99,6 +103,22 @@ td.num{font-family:"IBM Plex Mono",Consolas,monospace;white-space:nowrap;font-va
 .pill.ok{background:color-mix(in srgb,var(--ok) 15%,transparent);color:var(--ok)}
 .pill.warn{background:color-mix(in srgb,var(--warn) 15%,transparent);color:var(--warn)}
 .legend{padding:12px 18px;font-size:13px;color:var(--ink-3);border-top:1px solid var(--line)}
+/* телефон: строка таблицы → карточка с подписями полей */
+@media (max-width:720px){
+  table,tbody{display:block;width:100%;min-width:0;font-size:15.5px}
+  thead{display:none}
+  .tabs{flex-wrap:wrap;overflow:visible}
+  .tab{flex:1 1 auto;text-align:center;padding:10px 8px;font-size:14px}
+  tr{display:block;padding:14px 16px;border-bottom:1px solid var(--line)}
+  tr:last-child{border-bottom:0}
+  td{display:block;padding:5px 0;border:0;white-space:normal}
+  td.num{white-space:normal}
+  td:before{content:attr(data-label);display:block;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin-bottom:2px}
+  td:first-child{font-weight:600;font-size:17px;padding-bottom:8px}
+  td:first-child:before{display:none}
+  .panel .cap{font-size:15px}
+  .legend{font-size:14px}
+}
 /* steps */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
 @media (max-width:860px){.steps{grid-template-columns:1fr 1fr}}
@@ -268,6 +288,10 @@ footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;just
     var gone=0; items.forEach(function(li){var val=li.dataset[v]; li.querySelector('.v').textContent=val; var g=(v==='sm'&&li.dataset.gone); li.classList.toggle('gone',!!g); if(g)gone++;});
     note.textContent = v==='sm' ? 'Пять из шести строк в смете не совпадают с проектом. Всё подсвеченное подрядчик делает за свой счёт — если не найдёт до подписи.' : 'Переключите на «В смете» — увидите, что из проекта не дошло до цены контракта.';
   })});
+  document.querySelectorAll('table').forEach(function(t){
+    var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent});
+    t.querySelectorAll('tbody tr').forEach(function(r){[].forEach.call(r.children,function(c,i){c.setAttribute('data-label',h[i]||'')})});
+  });
   var tabs=document.querySelectorAll('.tab'), panels=document.querySelectorAll('.panel');
   tabs.forEach(function(t){t.addEventListener('click',function(){
     tabs.forEach(function(x){x.setAttribute('aria-selected',x===t?'true':'false')});
