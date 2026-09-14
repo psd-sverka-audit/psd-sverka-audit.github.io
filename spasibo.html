@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow">
+<title>Заявка принята — Сито</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#eef0f2; --paper:#ffffff; --paper-2:#f6f7f8; --ink:#10161c; --ink-2:#4a5866; --ink-3:#7a8794; --line:#d3d9de;
+  --accent:#e4560a; --accent-soft:#fdebe1; --accent-ink:#ffffff;
+  --dark:#151d25; --dark-2:#1f2a34; --dark-text:#eef1f3; --dark-muted:#98a5b1;
+  --ok:#2f7d4f; --warn:#b4670a;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0e1418; --paper:#161e25; --paper-2:#1b242c; --ink:#eef1f3; --ink-2:#b3bec8; --ink-3:#8492a0; --line:#2a353f;
+    --accent:#ff6b22; --accent-soft:#3a2416; --accent-ink:#10161c;
+    --dark:#1b2530; --dark-2:#243040; --dark-text:#eef1f3; --dark-muted:#98a5b1;
+    --ok:#5cc084; --warn:#e9a23b;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0e1418; --paper:#161e25; --paper-2:#1b242c; --ink:#eef1f3; --ink-2:#b3bec8; --ink-3:#8492a0; --line:#2a353f;
+  --accent:#ff6b22; --accent-soft:#3a2416; --accent-ink:#10161c;
+  --dark:#1b2530; --dark-2:#243040; --dark-text:#eef1f3; --dark-muted:#98a5b1;
+  --ok:#5cc084; --warn:#e9a23b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+section[id],header[id]{scroll-margin-top:76px}  /* иначе липкая шапка накрывает заголовок раздела */
+body{margin:0;background:var(--ground);color:var(--ink);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:17px;line-height:1.5}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Unbounded",Arial,sans-serif;text-wrap:balance;margin:0}
+h1{font-weight:900;font-size:clamp(30px,5.4vw,56px);line-height:1.08;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--accent)}
+h2{font-weight:700;font-size:clamp(22px,3.4vw,34px);line-height:1.15;margin-bottom:14px}
+h3{font-weight:700;font-size:17px;line-height:1.3}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin-bottom:12px}
+p{margin:0}
+.muted{color:var(--ink-2)}
+.mono{font-family:"IBM Plex Mono",Consolas,monospace;font-variant-numeric:tabular-nums}
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--ground) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.logo{font-family:"Unbounded",Arial,sans-serif;font-weight:900;font-size:18px;letter-spacing:.04em;color:var(--ink);text-decoration:none}
+nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0}
+nav li a{color:var(--ink-2);text-decoration:none;font-size:15px;font-weight:500}
+nav li a:hover{color:var(--ink)}
+@media (max-width:720px){nav ul{display:none}}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:17px;padding:14px 22px;border-radius:8px;border:0;cursor:pointer;font-family:inherit}
+.btn.small{font-size:15px;padding:10px 16px}
+.btn:focus-visible,.tab:focus-visible,.seg button:focus-visible,summary:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn svg{width:20px;height:20px;fill:currentColor}
+/* hero */
+.hero{padding-block:64px 56px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+@media (max-width:860px){.hero{grid-template-columns:1fr;gap:36px;padding-block:44px 40px}}
+.hero .lead{font-size:19px;color:var(--ink-2);margin:20px 0 28px;max-width:32em}
+.hero .sub{font-size:14px;color:var(--ink-3);margin-top:12px}
+/* toggle demo */
+.demo{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px;box-shadow:0 12px 40px -24px rgba(0,0,0,.35)}
+.seg{display:inline-flex;background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:4px;gap:4px;margin-bottom:16px}
+.seg button{border:0;background:transparent;font:inherit;font-weight:600;font-size:15px;padding:8px 16px;border-radius:999px;color:var(--ink-2);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--ground)}
+.demo ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.demo li{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;border-radius:8px;background:var(--paper-2);font-size:15px;transition:background .25s,opacity .25s}
+.demo li .v{font-family:"IBM Plex Mono",Consolas,monospace;white-space:nowrap;color:var(--ink-2)}
+.demo li.gone{background:var(--accent-soft);color:var(--ink)}
+.demo li.gone .v{color:var(--accent);font-weight:600}
+.demo .note{font-size:13px;color:var(--ink-3);margin-top:12px;min-height:2.6em}
+/* sections */
+section{padding:64px 0}
+@media (max-width:860px){section{padding:44px 0}}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:860px){.grid3{grid-template-columns:1fr}}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:20px}
+.card h3{margin-bottom:8px}
+.card p{color:var(--ink-2);font-size:15.5px}
+.band{background:var(--dark);color:var(--dark-text)}
+.band .eyebrow{color:var(--dark-muted)}
+.band .muted{color:var(--dark-muted)}
+.band .card{background:var(--dark-2);border-color:transparent}
+.band .card h3{color:var(--dark-text)}
+.band .card p{color:var(--dark-muted)}
+.band b{color:var(--accent)}
+/* report tabs */
+.tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);margin-bottom:0;overflow-x:auto}
+.tab{border:0;background:transparent;font:inherit;font-weight:600;font-size:15px;padding:12px 14px;color:var(--ink-2);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-1px;white-space:nowrap}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.band .tab{color:var(--dark-muted)}
+.band .tab[aria-selected="true"]{color:var(--dark-text)}
+.panel{display:none;background:var(--paper);border:1px solid var(--line);border-top:0;border-radius:0 0 10px 10px}
+.panel[data-active]{display:block}
+.panel{color:var(--ink)}
+.panel .cap{padding:14px 18px;font-size:14px;color:var(--ink-2);border-bottom:1px solid var(--line)}
+td{color:var(--ink)}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:14.5px}
+th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}
+th{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:600;background:var(--paper-2)}
+td.num{font-family:"IBM Plex Mono",Consolas,monospace;font-variant-numeric:tabular-nums}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:3px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
+.pill.ok{background:color-mix(in srgb,var(--ok) 15%,transparent);color:var(--ok)}
+.pill.warn{background:color-mix(in srgb,var(--warn) 15%,transparent);color:var(--warn)}
+.legend{padding:12px 18px;font-size:13px;color:var(--ink-3);border-top:1px solid var(--line)}
+/* телефон: строка таблицы → карточка с подписями полей */
+@media (max-width:720px){
+  table,tbody{display:block;width:100%;min-width:0;font-size:15.5px}
+  thead{display:none}
+  .tabs{flex-wrap:wrap;overflow:visible}
+  .tab{flex:1 1 auto;text-align:center;padding:10px 8px;font-size:14px}
+  tr{display:block;padding:14px 16px;border-bottom:1px solid var(--line)}
+  tr:last-child{border-bottom:0}
+  td{display:block;padding:5px 0;border:0;white-space:normal}
+  td.num{white-space:normal}
+  td:before{content:attr(data-label);display:block;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin-bottom:2px}
+  td:first-child{font-weight:600;font-size:17px;padding-bottom:8px}
+  td:first-child:before{display:none}
+  .panel .cap{font-size:15px}
+  .legend{font-size:14px}
+}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
+@media (max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+.step{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:20px;counter-increment:s;position:relative}
+.step:before{content:counter(s);font-family:"Unbounded",Arial,sans-serif;font-weight:900;font-size:28px;color:var(--accent);display:block;margin-bottom:10px}
+.step p{color:var(--ink-2);font-size:15px}
+/* faq */
+details{border-top:1px solid var(--line)}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:600;font-size:17px;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font-family:"Unbounded",Arial,sans-serif;color:var(--accent);flex:none}
+details[open] summary:after{content:"–"}
+details p{padding:0 0 18px;color:var(--ink-2);max-width:62em}
+/* cta */
+.final{padding:72px 0;text-align:left}
+.final .card{padding:32px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
+@media (max-width:860px){.final .card{grid-template-columns:1fr}}
+footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+/* mobile sticky cta */
+.sticky{position:fixed;left:0;right:0;bottom:0;padding:10px 16px;background:color-mix(in srgb,var(--ground) 92%,transparent);border-top:1px solid var(--line);display:none;z-index:30}
+.sticky .btn{width:100%;justify-content:center}
+@media (max-width:720px){.sticky{display:block}body{padding-bottom:76px}}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.demo li{transition:none}}
+  .кнопки{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+  .btn.ghost:hover{background:var(--accent);color:#fff}
+  /* форма заявки */
+.форма{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:28px;max-width:640px}
+.форма .поле{margin-bottom:16px}
+.форма label{display:block;font-size:14px;font-weight:600;color:var(--ink-2);margin-bottom:6px}
+.форма input,.форма select,.форма textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);
+  background:var(--paper-2);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.форма input:focus,.форма select:focus,.форма textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+.форма textarea{min-height:84px;resize:vertical}
+.форма .ряд{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:620px){.форма{padding:20px}.форма .ряд{grid-template-columns:1fr}}
+.форма .подпись{font-size:13.5px;color:var(--ink-3);margin-top:14px}
+.форма .обяз{color:var(--accent)}
+.ловушка{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.копи{font:inherit;color:var(--accent);background:none;border:0;border-bottom:1px dashed currentColor;
+        padding:0;cursor:pointer}
+  .копи.готово{border-bottom-style:solid}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="index.html">СИТО</a>
+  <a class="btn small" href="index.html">← на главную</a>
+</div></nav>
+
+<section><div class="wrap" style="max-width:680px">
+  <div class="eyebrow">Заявка принята</div>
+  <h1 style="font-size:clamp(26px,4.4vw,40px)">Спасибо, заявка у нас</h1>
+  <p class="lead" style="font-size:18px;color:var(--ink-2);margin:20px 0 28px">
+    На указанную почту ушло подтверждение. Ответим в течение рабочего дня, а если вы указали
+    номер закупки — заберём документацию и посмотрим объём ещё до разговора.
+  </p>
+
+  <div class="card" style="margin-bottom:16px">
+    <h3>Что дальше</h3>
+    <p>Диагностика занимает 1–2 рабочих дня и ничего не стоит. По её итогам скажем,
+    есть ли что искать, каких томов не хватает в пакете, и назовём стоимость и срок —
+    до всякой оплаты.</p>
+  </div>
+
+  <div class="card" style="margin-bottom:24px">
+    <h3>Если дело срочное</h3>
+    <p>Звоните: <a href="tel:+79931500747" style="color:var(--accent);font-weight:600">8 (993) 150-07-47</a>.
+    Почта — <button type="button" class="копи" data-копи="zz_realt@mail.ru" title="нажмите, чтобы скопировать адрес">zz_realt@mail.ru</button>.
+    Особенно если срок подачи заявки на торгах ещё идёт: до торгов каждый найденный рубль стоит дороже всего.</p>
+  </div>
+
+  <p><a class="btn" href="index.html">Вернуться на сайт</a>
+  <a class="btn small ghost" href="oferta.html" style="margin-left:12px">Читать оферту</a></p>
+</div></section>
+
+<footer class="wrap" style="padding-bottom:40px">
+  <div>Сито · проверка сметы против проекта.<br><span style="opacity:.75">Редакция страницы: 14.09.2026</span></div>
+</footer>
+
+<script>
+document.querySelectorAll('.копи').forEach(function(b){
+  b.addEventListener('click',function(){
+    var а=b.getAttribute('data-копи'), было=b.textContent;
+    function сказать(){b.textContent='скопировано';b.classList.add('готово');
+      setTimeout(function(){b.textContent=было;b.classList.remove('готово')},1600);}
+    function вручную(){var p=document.createElement('textarea');p.value=а;document.body.appendChild(p);
+      p.select();try{document.execCommand('copy');сказать();}catch(e){}document.body.removeChild(p);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(а).then(сказать,вручную);}
+    else {вручную();}
+  });
+});
+</script>
+
+<script>
+/* звонок-на-компьютере: на телефоне tel: открывает набор номера, на компьютере
+   чаще всего не открывает ничего — тогда вместо мёртвого нажатия копируем номер */
+(function(){
+  var телефонный = window.matchMedia && window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+  if (телефонный) return;
+  document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      var номер = a.getAttribute('href').replace('tel:','');
+      var было = a.textContent, узел = a.querySelector('svg');
+      function сказать(){
+        a.textContent = 'номер скопирован';
+        setTimeout(function(){ a.textContent = ''; if(узел) a.appendChild(узел);
+          a.appendChild(document.createTextNode(было.trim())); }, 1800);
+      }
+      function вручную(){
+        var p=document.createElement('textarea'); p.value=номер; document.body.appendChild(p);
+        p.select(); try{ document.execCommand('copy'); сказать(); }catch(err){}
+        document.body.removeChild(p);
+      }
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(номер).then(сказать, вручную);
+      } else { вручную(); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
