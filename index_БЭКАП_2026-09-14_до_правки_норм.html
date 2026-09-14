@@ -145,12 +145,6 @@ footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;just
 .sticky .btn{width:100%;justify-content:center}
 @media (max-width:720px){.sticky{display:block}body{padding-bottom:76px}}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.demo li{transition:none}}
-  .кнопки{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-  .btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
-  .btn.ghost:hover{background:var(--accent);color:#fff}
-  .копи{font:inherit;color:var(--accent);background:none;border:0;border-bottom:1px dashed currentColor;
-        padding:0;cursor:pointer}
-  .копи.готово{border-bottom-style:solid}
 </style>
 </head>
 <body>
@@ -165,9 +159,8 @@ footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;just
     <div class="eyebrow">Проверка сметы против проекта</div>
     <h1>Вы строите по проекту. Платят вам по смете. <em>Разница — ваши деньги.</em></h1>
     <p class="lead">Сверяем каждую позицию сметы с чертежами и находим то, что вам придётся делать бесплатно, — до того, как вы это подписали.</p>
-    <div class="кнопки"><a class="btn" href="https://wa.me/79931500747?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D1%82%D1%8C%20%D1%81%D0%BC%D0%B5%D1%82%D1%83.%0A%D0%9D%D0%BE%D0%BC%D0%B5%D1%80%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B2%20%D0%95%D0%98%D0%A1%20%28%D0%B8%D0%BB%D0%B8%20%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0%29%3A%20%0A%D0%A1%D1%82%D0%B0%D0%B4%D0%B8%D1%8F%3A%20%D0%B4%D0%BE%20%D1%82%D0%BE%D1%80%D0%B3%D0%BE%D0%B2%20/%20%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82%20%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%2C%20%D0%B0%D0%BA%D1%82%D0%BE%D0%B2%20%D0%BD%D0%B5%D1%82%20/%20%D0%B0%D0%BA%D1%82%D1%8B%20%D0%B8%D0%B4%D1%83%D1%82"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L3 21l1.5-5.3A8.5 8.5 0 1 1 21 12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Написать в WhatsApp</a></div>
-    <p class="sub">Достаточно номера закупки — документацию из ЕИС возьмём сами. Диагностика бесплатная: скажем, есть ли что искать, и назовём стоимость.<br>
-    Документы и переписка — почтой: <button type="button" class="копи" data-копи="zz_realt@mail.ru" title="нажмите, чтобы скопировать адрес">zz_realt@mail.ru</button> · телефон <button type="button" class="копи" data-копи="+79931500747" title="нажмите, чтобы скопировать номер">8 (993) 150-07-47</button></p>
+    <a class="btn" href="mailto:zz_realt@mail.ru?subject=%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%20%D1%81%D0%BC%D0%B5%D1%82%D1%8B%20%D0%BF%D1%80%D0%BE%D1%82%D0%B8%D0%B2%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5.%0A%0A%D0%9D%D0%BE%D0%BC%D0%B5%D1%80%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B2%20%D0%95%D0%98%D0%A1%20%28%D0%B8%D0%BB%D0%B8%20%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0%29%3A%20%0A%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%3A%20%0A%D0%A1%D1%82%D0%B0%D0%B4%D0%B8%D1%8F%3A%20%D0%B4%D0%BE%20%D1%82%D0%BE%D1%80%D0%B3%D0%BE%D0%B2%20/%20%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82%20%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%2C%20%D0%B0%D0%BA%D1%82%D0%BE%D0%B2%20%D0%BD%D0%B5%D1%82%20/%20%D0%B0%D0%BA%D1%82%D1%8B%20%D0%B8%D0%B4%D1%83%D1%82%0A%0A%D0%95%D1%81%D0%BB%D0%B8%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BD%D0%B5%20%D1%81%20%D0%B3%D0%BE%D1%81%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%20%E2%80%94%20%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0%20%D0%BD%D0%B0%20%D0%B0%D1%80%D1%85%D0%B8%D0%B2%20%28%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81.%D0%94%D0%B8%D1%81%D0%BA%2C%20%D0%9E%D0%B1%D0%BB%D0%B0%D0%BA%D0%BE%20Mail.ru%29%3A%20%0A%0A%D0%A2%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20%D0%B4%D0%BB%D1%8F%20%D1%81%D0%B2%D1%8F%D0%B7%D0%B8%3A%20"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v14H2z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 6l10 7 10-7" fill="none" stroke="currentColor" stroke-width="2"/></svg>Прислать проект и смету</a>
+    <p class="sub">Достаточно номера закупки — документацию из ЕИС возьмём сами. Первый взгляд бесплатный: скажем, есть ли что искать, и назовём стоимость.<br>Вопрос без файлов — <a href="https://wa.me/79931500747?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D1%82%D1%8C%20%D1%81%D0%BC%D0%B5%D1%82%D1%83" style="color:var(--accent)">в WhatsApp</a>.</p>
   </div>
   <div class="demo" aria-label="Пример: один и тот же объект в проекте и в смете">
     <div class="eyebrow">Напорная канализация, закупка 2026</div>
@@ -191,16 +184,16 @@ footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;just
   <div class="eyebrow">Узнаёте?</div>
   <h2>Где это всплывает обычно — на стройке, когда спорить уже поздно</h2>
   <div class="grid3">
-    <div class="card"><h3>«По проекту надо ещё вот это»</h3><p>Прораб открывает лист — и там работа, которой в смете нет. Делаете, потому что иначе объект не примут. Денег за эту работу не приходит ни от кого.</p></div>
+    <div class="card"><h3>«По проекту надо ещё вот это»</h3><p>Прораб открывает лист — и там работа, которой в смете нет. Делаете, потому что иначе не примут. Платит за неё никто.</p></div>
     <div class="card"><h3>Заказчик снимает объёмы при приёмке</h3><p>«В смете меньше». А в проекте — столько, сколько вы сделали. Спор идёт «в целом», а не по позициям, и выигрывает в нём тот, у кого на руках документ.</p></div>
-    <div class="card"><h3>Работа есть, материала нет</h3><p>Устройство покрытия посчитано, сам материал — нет. Сумма позиции выглядит нормально, и при беглом чтении сметы такое не видно.</p></div>
+    <div class="card"><h3>Работа есть, материала нет</h3><p>Устройство покрытия посчитано, сам материал — нет. Сумма позиции выглядит нормально. Глазами это не ловится вообще.</p></div>
   </div>
 </div></section>
 
 <section id="report" class="band"><div class="wrap">
   <div class="eyebrow">Что вы получаете</div>
   <h2>Таблица, с которой можно идти к заказчику</h2>
-  <p class="muted" style="max-width:40em;margin-bottom:24px">Ниже — отчёт по смете с госзакупок; объект и заказчик не раскрываются. Каждая строка ведёт к листу проекта и позиции сметы.</p>
+  <p class="muted" style="max-width:40em;margin-bottom:24px">Ниже — отчёт по смете с госзакупок, объект и заказчик скрыты. Каждая строка ведёт к листу проекта и позиции сметы.</p>
   <div class="tabs" role="tablist">
     <button class="tab" role="tab" aria-selected="true" data-tab="t1">Расхождения · 24</button>
     <button class="tab" role="tab" aria-selected="false" data-tab="t2">Не проверено · 12</button>
@@ -253,70 +246,67 @@ footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;just
   <h2>Как это идёт по шагам</h2>
   <div class="steps">
     <div class="step"><h3>Вы присылаете номер закупки</h3><p>Или ссылку на архив, если документация не из ЕИС. Файлы — архивом на почту или ссылкой на облако. Контракт — если уже подписан.</p></div>
-    <div class="step"><h3>Диагностика — 1–2 дня, бесплатно</h3><p>Говорим, есть ли что искать, каких томов не хватает, и называем стоимость и срок. Ни к чему вас не обязывает.</p></div>
-    <div class="step"><h3>Сверка — 5–10 рабочих дней</h3><p>Каждая позиция сметы против чертежей, спецификаций и ведомостей. Все строки, не выборка. Срок зависит от объёма сметы: до 5 дней на небольшой, до 10 — на крупной.</p></div>
-    <div class="step"><h3>Файл и разбор</h3><p>Таблица расхождений, лист «не проверено» и встречный лист. Разбираем результат: какие строки сильнее и чем каждая подтверждается. Ваши файлы после этого удаляются.</p></div>
+    <div class="step"><h3>Первый взгляд — за 1–2 дня</h3><p>Говорим, есть ли что искать, каких томов не хватает, и называем стоимость. Она зависит от объёма сметы.</p></div>
+    <div class="step"><h3>Сверка — от 5 до 10 рабочих дней</h3><p>Каждая позиция сметы против чертежей, спецификаций и ведомостей. Все строки, не выборка; срок зависит от объёма сметы.</p></div>
+    <div class="step"><h3>Файл и разбор</h3><p>Таблица расхождений, лист «не проверено», встречный лист и первый ход — с какой позиции начинать разговор с заказчиком. Ваши файлы после этого удаляются.</p></div>
   </div>
 </div></section>
 
 <section class="band"><div class="wrap">
   <div class="eyebrow">На чём это стоит в законе</div>
   <div class="grid3">
-    <div class="card"><h3>Ст. 743 ГК</h3><p>Техническая документация определяет объём работ, смета — их цену. Объём, который есть в проекте и не обеспечен сметой, — основание поставить перед заказчиком вопрос о цене.</p></div>
-    <div class="card"><h3>Ст. 716 ГК</h3><p>Подрядчик обязан сообщить заказчику о несоответствии документации, как только его обнаружил. Сообщил письменно и вовремя — действовал добросовестно; промолчал — расхождение потом трактуют против него.</p></div>
-    <div class="card"><h3>Позже — дороже</h3><p>Пока работы не начаты, расхождение — вопрос к документации. После того как объём принят, это уже спор о деньгах, и весит он меньше.</p></div>
+    <div class="card"><h3>Ст. 743 ГК</h3><p>Работы, которых нет в смете, но требует проект, — основание для корректировки цены контракта.</p></div>
+    <div class="card"><h3>Ст. 716 ГК</h3><p>Подрядчик обязан сообщить о несоответствии документации, как только его обнаружил. Кто нашёл первым и оформил — тот и решает, чьи это деньги.</p></div>
+    <div class="card"><h3>Позже — дороже</h3><p>Каждый подписанный акт закрывает дверь. Найденное до первого акта — корректировка; после — спор.</p></div>
   </div>
 </div></section>
 
 <section id="price"><div class="wrap">
   <div class="eyebrow">Цена</div>
-  <h2>Цена и срок известны до начала работы</h2>
-  <p class="muted" style="max-width:44em;margin-bottom:24px">Тариф зависит от цены контракта и числа позиций сметы. В таблице — нижняя граница; точную цену и срок называем после бесплатной диагностики, до оплаты. Полные условия — в <a href="oferta.html" style="color:var(--accent)">публичной оферте</a>.</p>
+  <h2>Цена известна до начала работы. Не нашли ничего — половина возвращается.</h2>
+  <p class="muted" style="max-width:44em;margin-bottom:24px">Тариф — по цене контракта, он виден в таблице до того, как вы что-то оплатили. Полные условия — в <a href="oferta.html" style="color:var(--accent)">публичной оферте</a>.</p>
   <div class="tbl"><table>
-    <thead><tr><th>Цена контракта</th><th>Стоимость проверки</th><th>Срок</th></tr></thead>
+    <thead><tr><th>Цена контракта</th><th>Стоимость проверки</th></tr></thead>
     <tbody>
-      <tr><td>от 10 до 25 млн ₽</td><td class="num">от 30 000 ₽</td><td>до 5 рабочих дней</td></tr>
-      <tr><td>свыше 25 до 60 млн ₽</td><td class="num">от 55 000 ₽</td><td>до 7 рабочих дней</td></tr>
-      <tr><td>свыше 60 до 150 млн ₽</td><td class="num">от 90 000 ₽</td><td>до 10 рабочих дней</td></tr>
-      <tr><td>свыше 150 до 400 млн ₽</td><td class="num">от 150 000 ₽</td><td>по расчёту</td></tr>
-      <tr><td>свыше 400 млн ₽</td><td class="num">от 220 000 ₽, по расчёту</td><td>по расчёту</td></tr>
-      <tr><td>Один раздел сметы по вашему выбору</td><td class="num">от 10 000 ₽</td><td>3 рабочих дня</td></tr>
+      <tr><td>от 10 до 25 млн ₽</td><td class="num">30 000 ₽</td></tr>
+      <tr><td>свыше 25 до 60 млн ₽</td><td class="num">55 000 ₽</td></tr>
+      <tr><td>свыше 60 до 150 млн ₽</td><td class="num">90 000 ₽</td></tr>
+      <tr><td>свыше 150 до 400 млн ₽</td><td class="num">150 000 ₽</td></tr>
+      <tr><td>свыше 400 млн ₽</td><td class="num">от 220 000 ₽, по расчёту</td></tr>
+      <tr><td>Один раздел сметы по вашему выбору</td><td class="num">15 000 ₽</td></tr>
     </tbody>
   </table></div>
-  <div class="legend">В таблице — нижняя граница: цена и срок зависят от числа позиций сметы. Точную цену и срок называем после бесплатной диагностики, до оплаты. Срочно, вдвое быстрее — плюс 50 %. Второй и последующие объекты того же заказчика — минус 20 %. Оплата по счёту, безналично, до начала работы. НДС не облагается: упрощённая система, п. 2 ст. 346.11 НК РФ.</div>
+  <div class="legend">Срок — по числу позиций сметы: до 300 позиций — 5 рабочих дней, 300–800 — 7, 800–1500 — 10, свыше 1500 — по расчёту. Один раздел — 3 рабочих дня. Срочно, вдвое быстрее — плюс 50 %. Второй и последующие объекты того же заказчика — минус 20 %. Оплата по счёту, безналично, до начала работы. НДС не облагается: упрощённая система, п. 2 ст. 346.11 НК РФ.</div>
   <div class="grid3" style="margin-top:24px;grid-template-columns:repeat(2,1fr)">
-    <div class="card"><h3>Если расхождений нет</h3><p>Это тоже результат: у вас на руках документ «проверено сплошь, упущений нет», и акты вы подписываете спокойно. Отдельным листом идёт то, что проверить не удалось, и почему — чаще всего причина в неполноте переданной документации.</p></div>
+    <div class="card"><h3>Если расхождений нет</h3><p>Возвращаем 50 % уплаченного. У вас на руках остаётся документ «проверено сплошь, упущений нет», и акты вы подписываете спокойно. Расхождением считается строка реестра со ссылкой на лист документации и позицию сметы — так это записано в оферте.</p></div>
     <div class="card"><h3>Как платить</h3><p>Счёт выставляем в ответ на ваш запрос — после того, как назвали цену и вы согласились. Работаем по договору-оферте — отдельный договор подписывать не нужно, но по вашему запросу подпишем. По завершении — акт.</p></div>
   </div>
-  <p style="margin-top:24px"><a class="btn" href="https://wa.me/79931500747?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5.%20%D0%9F%D1%80%D0%BE%D1%88%D1%83%20%D0%B2%D1%8B%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%20%D1%81%D1%87%D1%91%D1%82%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D1%83%20%D1%81%D0%BC%D0%B5%D1%82%D1%8B.%0A%D0%9E%D1%80%D0%B3%D0%B0%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%3A%20%0A%D0%98%D0%9D%D0%9D%3A%20%0A%D0%9D%D0%BE%D0%BC%D0%B5%D1%80%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B8%D0%BB%D0%B8%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%3A%20%0A%D0%A6%D0%B5%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%B0%3A%20"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L3 21l1.5-5.3A8.5 8.5 0 1 1 21 12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Запросить счёт в WhatsApp</a>
-  <a class="btn small ghost" href="oferta.html" style="margin-left:12px">Читать оферту</a></p>
-  <p class="muted" style="max-width:44em;font-size:15px">В сообщении уже готовы поля: организация, ИНН, номер закупки, цена контракта. Счёт на вашу организацию выставим в ответ, в течение рабочего дня. Если удобнее почтой — адрес <button type="button" class="копи" data-копи="zz_realt@mail.ru" title="нажмите, чтобы скопировать адрес">zz_realt@mail.ru</button>, те же четыре строки.</p>
+  <p style="margin-top:24px"><a class="btn" href="mailto:zz_realt@mail.ru?subject=%D0%A1%D1%87%D1%91%D1%82%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D1%83%20%D1%81%D0%BC%D0%B5%D1%82%D1%8B&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5.%0A%0A%D0%9F%D1%80%D0%BE%D1%88%D1%83%20%D0%B2%D1%8B%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%20%D1%81%D1%87%D1%91%D1%82%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D1%83%20%D1%81%D0%BC%D0%B5%D1%82%D1%8B.%0A%0A%D0%9E%D1%80%D0%B3%D0%B0%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%28%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%B5%20%D0%BD%D0%B0%D0%B8%D0%BC%D0%B5%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%29%3A%20%0A%D0%98%D0%9D%D0%9D%20/%20%D0%9A%D0%9F%D0%9F%3A%20%0A%D0%9D%D0%BE%D0%BC%D0%B5%D1%80%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B2%20%D0%95%D0%98%D0%A1%20%D0%B8%D0%BB%D0%B8%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%3A%20%0A%D0%A6%D0%B5%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%B0%3A%20%0A%D0%A7%D1%82%D0%BE%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D1%8F%D0%B5%D0%BC%3A%20%D0%B2%D1%81%D1%8F%20%D1%81%D0%BC%D0%B5%D1%82%D0%B0%20/%20%D0%BE%D0%B4%D0%B8%D0%BD%20%D1%80%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB%20%28%D0%BA%D0%B0%D0%BA%D0%BE%D0%B9%29%3A%20%0A%D0%9F%D0%BE%D1%87%D1%82%D0%B0%20%D0%B4%D0%BB%D1%8F%20%D1%81%D1%87%D1%91%D1%82%D0%B0%20%D0%B8%20%D0%B0%D0%BA%D1%82%D0%B0%3A%20%0A%D0%A2%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%3A%20%0A"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16v18H4z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 8h8M8 12h8M8 16h5" fill="none" stroke="currentColor" stroke-width="2"/></svg>Запросить счёт</a>
+  <a class="btn small" href="oferta.html" style="margin-left:12px;background:transparent;color:var(--accent);border:1px solid var(--accent)">Читать оферту</a></p>
+  <p class="muted" style="max-width:44em;font-size:15px">Кнопка открывает письмо с готовыми полями — организация, ИНН, номер закупки. Счёт на вашу организацию выставим в ответ, в течение рабочего дня. Если почтовая программа не открылась — напишите на <a href="mailto:zz_realt@mail.ru" style="color:var(--accent)">zz_realt@mail.ru</a> или <a href="https://wa.me/79931500747?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5.%20%D0%9F%D1%80%D0%BE%D1%88%D1%83%20%D0%B2%D1%8B%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%20%D1%81%D1%87%D1%91%D1%82%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D1%83%20%D1%81%D0%BC%D0%B5%D1%82%D1%8B.%0A%D0%9E%D1%80%D0%B3%D0%B0%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%3A%20%0A%D0%98%D0%9D%D0%9D%3A%20%0A%D0%9D%D0%BE%D0%BC%D0%B5%D1%80%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B8%D0%BB%D0%B8%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%3A%20%0A%D0%A6%D0%B5%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%B0%3A%20" style="color:var(--accent)">в WhatsApp</a>: те же четыре строки, этого достаточно.</p>
 </div></section>
 
 <section id="faq"><div class="wrap">
   <div class="eyebrow">Вопросы, которые задают</div>
   <h2>Что спрашивают до того, как прислать документы</h2>
   <details><summary>Кто увидит нашу документацию?</summary><p>Только исполнитель проверки. Файлы не передаются третьим лицам, не публикуются и удаляются после сдачи отчёта. По запросу подписываем соглашение о конфиденциальности до получения файлов.</p></details>
-  <details><summary>Заказчик скажет: «вы видели смету при заключении, возражений не было». Что тогда?</summary><p>Контракт сам предусматривает выявление несоответствий в ходе исполнения и обязывает подрядчика направить акт именно тогда. Механизм, установленный заказчиком, не может быть обращён против того, кто им пользуется. Эту формулировку смотрим по вашему контракту, а в отчёте видно, на какие листы проекта и позиции сметы в ней ссылаться.</p></details>
-  <details><summary>Сколько это стоит?</summary><p>По тарифу от цены контракта — <a href="#price" style="color:var(--accent)">таблица выше</a>, от 30 000 ₽; один раздел — от 10 000 ₽. Точную цену и срок называем после бесплатной диагностики, до оплаты. Если искать нечего — скажем на диагностике, ещё до счёта.</p></details>
+  <details><summary>Заказчик скажет: «вы видели смету при заключении, возражений не было». Что тогда?</summary><p>Контракт сам предусматривает выявление несоответствий в ходе исполнения и обязывает подрядчика направить акт именно тогда. Механизм, установленный заказчиком, не может быть обращён против того, кто им пользуется. Формулировку проверяем по вашему контракту и даём готовой.</p></details>
+  <details><summary>Сколько это стоит?</summary><p>По тарифу от цены контракта — <a href="#price" style="color:var(--accent)">таблица выше</a>, от 30 000 ₽; один раздел — 15 000 ₽. Если искать нечего — так и скажем на первом взгляде, а если это выяснится уже по результату проверки, вернём половину оплаты.</p></details>
   <details><summary>Как оформляются отношения и документы?</summary><p>Работаем по <a href="oferta.html" style="color:var(--accent)">публичной оферте</a>: оплата счёта означает принятие её условий, отдельный договор подписывать не нужно — но по запросу подпишем, как и соглашение о конфиденциальности до передачи файлов. Закрываемся актом. Исполнитель работает на упрощённой системе, поэтому НДС в счёте нет.</p></details>
   <details><summary>Нужен ли юрист?</summary><p>Для самой сверки не нужен. Вы получаете факты со ссылками на листы и позиции, и они же годятся приложением к письму или акту о несоответствии. Юрист нужен, если дело дошло до претензии; тогда у него уже будет вся фактура.</p></details>
   <details><summary>Коммерческие объекты, не только госконтракты?</summary><p>Да. Механика та же: проект против сметы. Меняется только то, на что ссылаемся в основании — контракт вместо 44-ФЗ.</p></details>
-  <details><summary>А если расхождений нет?</summary><p>Это тоже результат: «упущений нет, проверено так-то» — с отдельным листом, что проверить не удалось и почему. С таким документом акты подписываются спокойно.</p></details>
+  <details><summary>А если расхождений нет?</summary><p>Это тоже результат: «упущений нет, проверено так-то» — с листом «что не проверено». И половину оплаты в этом случае вернём.</p></details>
 </div></section>
 
 <section class="final"><div class="wrap">
   <div class="card">
-    <div><h2>Проверьте смету до того, как начнёте работы</h2><p class="muted">Пришлите номер закупки или ссылку на документацию — скажем, что нужно ещё и сколько это займёт. Цена и условия — <a href="#price" style="color:var(--accent)">в таблице</a> и <a href="oferta.html" style="color:var(--accent)">в оферте</a>.</p></div>
-    <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn" href="https://wa.me/79931500747?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D1%82%D1%8C%20%D1%81%D0%BC%D0%B5%D1%82%D1%83.%0A%D0%9D%D0%BE%D0%BC%D0%B5%D1%80%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B2%20%D0%95%D0%98%D0%A1%20%28%D0%B8%D0%BB%D0%B8%20%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0%29%3A%20%0A%D0%A1%D1%82%D0%B0%D0%B4%D0%B8%D1%8F%3A%20%D0%B4%D0%BE%20%D1%82%D0%BE%D1%80%D0%B3%D0%BE%D0%B2%20/%20%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82%20%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%2C%20%D0%B0%D0%BA%D1%82%D0%BE%D0%B2%20%D0%BD%D0%B5%D1%82%20/%20%D0%B0%D0%BA%D1%82%D1%8B%20%D0%B8%D0%B4%D1%83%D1%82"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L3 21l1.5-5.3A8.5 8.5 0 1 1 21 12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Написать в WhatsApp</a><a class="btn ghost" href="oferta.html">Читать оферту</a></div>
+    <div><h2>Проверьте смету до того, как подпишете первый акт</h2><p class="muted">Пришлите номер закупки или ссылку на документацию — скажем, что нужно ещё и сколько это займёт. Быстрее всего — в Telegram: <a href="https://t.me/smeta_lupa_bot" style="color:var(--accent)">@smeta_lupa_bot</a>, документацию из ЕИС бот возьмёт сам. Цена и условия — <a href="#price" style="color:var(--accent)">в таблице</a> и <a href="oferta.html" style="color:var(--accent)">в оферте</a>.</p></div>
+    <div><a class="btn" href="mailto:zz_realt@mail.ru?subject=%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%20%D1%81%D0%BC%D0%B5%D1%82%D1%8B%20%D0%BF%D1%80%D0%BE%D1%82%D0%B8%D0%B2%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5.%0A%0A%D0%9D%D0%BE%D0%BC%D0%B5%D1%80%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B2%20%D0%95%D0%98%D0%A1%20%28%D0%B8%D0%BB%D0%B8%20%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0%29%3A%20%0A%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%3A%20%0A%D0%A1%D1%82%D0%B0%D0%B4%D0%B8%D1%8F%3A%20%D0%B4%D0%BE%20%D1%82%D0%BE%D1%80%D0%B3%D0%BE%D0%B2%20/%20%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82%20%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%2C%20%D0%B0%D0%BA%D1%82%D0%BE%D0%B2%20%D0%BD%D0%B5%D1%82%20/%20%D0%B0%D0%BA%D1%82%D1%8B%20%D0%B8%D0%B4%D1%83%D1%82%0A%0A%D0%95%D1%81%D0%BB%D0%B8%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BD%D0%B5%20%D1%81%20%D0%B3%D0%BE%D1%81%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%20%E2%80%94%20%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0%20%D0%BD%D0%B0%20%D0%B0%D1%80%D1%85%D0%B8%D0%B2%20%28%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81.%D0%94%D0%B8%D1%81%D0%BA%2C%20%D0%9E%D0%B1%D0%BB%D0%B0%D0%BA%D0%BE%20Mail.ru%29%3A%20%0A%0A%D0%A2%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20%D0%B4%D0%BB%D1%8F%20%D1%81%D0%B2%D1%8F%D0%B7%D0%B8%3A%20"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v14H2z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 6l10 7 10-7" fill="none" stroke="currentColor" stroke-width="2"/></svg>Написать на почту</a></div>
   </div>
-  <footer>
-    <div>Сито · проверка сметы против проекта. Строительные подрядчики, госконтракты 44-ФЗ и коммерческие объекты. Пример отчёта — закупка 2026 года, объект и заказчик не раскрываются.</div>
-    <div><button type="button" class="копи" data-копи="+79931500747" title="нажмите, чтобы скопировать номер">8 (993) 150-07-47</button> · <button type="button" class="копи" data-копи="zz_realt@mail.ru" title="нажмите, чтобы скопировать адрес">zz_realt@mail.ru</button> · <a href="oferta.html">Публичная оферта</a></div>
-  </footer>
+  <footer><div>Сито · проверка сметы против проекта. Строительные подрядчики, госконтракты 44-ФЗ и коммерческие объекты.</div><div>Пример отчёта — закупка 2026 года, объект и заказчик не раскрываются.</div><div>8 (993) 150-07-47 · <a href="mailto:zz_realt@mail.ru">zz_realt@mail.ru</a> · <a href="https://t.me/smeta_lupa_bot">@smeta_lupa_bot</a> · <a href="oferta.html">Публичная оферта</a></div></footer>
 </div></section>
 
-<div class="sticky"><a class="btn" href="https://wa.me/79931500747?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D1%82%D1%8C%20%D1%81%D0%BC%D0%B5%D1%82%D1%83.%0A%D0%9D%D0%BE%D0%BC%D0%B5%D1%80%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B2%20%D0%95%D0%98%D0%A1%20%28%D0%B8%D0%BB%D0%B8%20%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0%29%3A%20%0A%D0%A1%D1%82%D0%B0%D0%B4%D0%B8%D1%8F%3A%20%D0%B4%D0%BE%20%D1%82%D0%BE%D1%80%D0%B3%D0%BE%D0%B2%20/%20%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82%20%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%2C%20%D0%B0%D0%BA%D1%82%D0%BE%D0%B2%20%D0%BD%D0%B5%D1%82%20/%20%D0%B0%D0%BA%D1%82%D1%8B%20%D0%B8%D0%B4%D1%83%D1%82"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L3 21l1.5-5.3A8.5 8.5 0 1 1 21 12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Написать в WhatsApp</a></div>
+<div class="sticky"><a class="btn" href="mailto:zz_realt@mail.ru?subject=%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%20%D1%81%D0%BC%D0%B5%D1%82%D1%8B%20%D0%BF%D1%80%D0%BE%D1%82%D0%B8%D0%B2%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5.%0A%0A%D0%9D%D0%BE%D0%BC%D0%B5%D1%80%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B2%20%D0%95%D0%98%D0%A1%20%28%D0%B8%D0%BB%D0%B8%20%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0%29%3A%20%0A%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%3A%20%0A%D0%A1%D1%82%D0%B0%D0%B4%D0%B8%D1%8F%3A%20%D0%B4%D0%BE%20%D1%82%D0%BE%D1%80%D0%B3%D0%BE%D0%B2%20/%20%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82%20%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%2C%20%D0%B0%D0%BA%D1%82%D0%BE%D0%B2%20%D0%BD%D0%B5%D1%82%20/%20%D0%B0%D0%BA%D1%82%D1%8B%20%D0%B8%D0%B4%D1%83%D1%82%0A%0A%D0%95%D1%81%D0%BB%D0%B8%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BD%D0%B5%20%D1%81%20%D0%B3%D0%BE%D1%81%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%20%E2%80%94%20%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0%20%D0%BD%D0%B0%20%D0%B0%D1%80%D1%85%D0%B8%D0%B2%20%28%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81.%D0%94%D0%B8%D1%81%D0%BA%2C%20%D0%9E%D0%B1%D0%BB%D0%B0%D0%BA%D0%BE%20Mail.ru%29%3A%20%0A%0A%D0%A2%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20%D0%B4%D0%BB%D1%8F%20%D1%81%D0%B2%D1%8F%D0%B7%D0%B8%3A%20">Прислать номер закупки</a></div>
 
 <script>
 (function(){
@@ -338,22 +328,5 @@ footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;just
 })();
 </script>
 
-<script>
-document.querySelectorAll('.копи').forEach(function(b){
-  b.addEventListener('click',function(){
-    var а=b.getAttribute('data-копи'), было=b.textContent;
-    function сказать(){b.textContent='скопировано';b.classList.add('готово');
-      setTimeout(function(){b.textContent=было;b.classList.remove('готово')},1600);}
-    if(navigator.clipboard&&navigator.clipboard.writeText){
-      navigator.clipboard.writeText(а).then(сказать,вручную);
-    } else {вручную();}
-    function вручную(){
-      var p=document.createElement('textarea');p.value=а;document.body.appendChild(p);
-      p.select();try{document.execCommand('copy');сказать();}catch(e){}
-      document.body.removeChild(p);
-    }
-  });
-});
-</script>
 </body>
 </html>
