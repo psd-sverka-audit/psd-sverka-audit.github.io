@@ -28,7 +28,7 @@ echo ============================================
 echo  OPUBLIKOVANO. Posledniy kommit:
 git --no-pager log -1 --pretty=format:"   %%h  %%ad  %%s" --date=format:"%%d.%%m.%%Y %%H:%%M"
 echo.
-echo  Stranica: https://psd-sverka-audit.github.io/
+echo  Stranica: https://sverka-smet.ru/
 echo  Obnovitsya cherez 1-2 minuty.
 echo  Otkryvayte s Ctrl+F5 - inache brauzer pokazhet staruyu stranicu iz kesha.
 echo ============================================
