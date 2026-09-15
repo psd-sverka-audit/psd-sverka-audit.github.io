@@ -11,21 +11,21 @@
 <style>
 :root{
   --ground:#eef0f2; --paper:#ffffff; --paper-2:#f6f7f8; --ink:#10161c; --ink-2:#4a5866; --ink-3:#7a8794; --line:#d3d9de;
-  --accent:#c2410c; --accent-soft:#fdebe1; --accent-ink:#ffffff;
+  --accent:#e4560a; --accent-soft:#fdebe1; --accent-ink:#ffffff;
   --dark:#151d25; --dark-2:#1f2a34; --dark-text:#eef1f3; --dark-muted:#98a5b1;
   --ok:#2f7d4f; --warn:#b4670a;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --ground:#0e1418; --paper:#161e25; --paper-2:#1b242c; --ink:#eef1f3; --ink-2:#b3bec8; --ink-3:#8492a0; --line:#2a353f;
-    --accent:#e2673a; --accent-soft:#3a2416; --accent-ink:#10161c;
+    --accent:#ff6b22; --accent-soft:#3a2416; --accent-ink:#10161c;
     --dark:#1b2530; --dark-2:#243040; --dark-text:#eef1f3; --dark-muted:#98a5b1;
     --ok:#5cc084; --warn:#e9a23b;
   }
 }
 :root[data-theme="dark"]{
   --ground:#0e1418; --paper:#161e25; --paper-2:#1b242c; --ink:#eef1f3; --ink-2:#b3bec8; --ink-3:#8492a0; --line:#2a353f;
-  --accent:#e2673a; --accent-soft:#3a2416; --accent-ink:#10161c;
+  --accent:#ff6b22; --accent-soft:#3a2416; --accent-ink:#10161c;
   --dark:#1b2530; --dark-2:#243040; --dark-text:#eef1f3; --dark-muted:#98a5b1;
   --ok:#5cc084; --warn:#e9a23b;
 }
@@ -35,9 +35,9 @@ section[id],header[id]{scroll-margin-top:76px}  /* иначе липкая ша�
 body{margin:0;background:var(--ground);color:var(--ink);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:17px;line-height:1.5}
 .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
 h1,h2,h3{font-family:"Unbounded",Arial,sans-serif;text-wrap:balance;margin:0}
-h1{font-weight:700;font-size:clamp(28px,4.4vw,46px);line-height:1.14;letter-spacing:-.015em}
+h1{font-weight:900;font-size:clamp(30px,5.4vw,56px);line-height:1.08;letter-spacing:-.01em}
 h1 em{font-style:normal;color:var(--accent)}
-h2{font-weight:600;font-size:clamp(21px,2.8vw,29px);line-height:1.22;letter-spacing:-.01em;margin-bottom:14px}
+h2{font-weight:700;font-size:clamp(22px,3.4vw,34px);line-height:1.15;margin-bottom:14px}
 h3{font-weight:700;font-size:17px;line-height:1.3}
 .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin-bottom:12px}
 p{margin:0}
@@ -72,8 +72,8 @@ nav li a:hover{color:var(--ink)}
 .demo li.gone .v{color:var(--accent);font-weight:600}
 .demo .note{font-size:13px;color:var(--ink-3);margin-top:12px;min-height:2.6em}
 /* sections */
-section{padding:72px 0}
-@media (max-width:860px){section{padding:52px 0}}
+section{padding:64px 0}
+@media (max-width:860px){section{padding:44px 0}}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 @media (max-width:860px){.grid3{grid-template-columns:1fr}}
 .связь{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:24px}
@@ -96,11 +96,6 @@ section{padding:72px 0}
 .card h3{margin-bottom:8px}
 .card p{color:var(--ink-2);font-size:15.5px}
 .band{background:var(--dark);color:var(--dark-text)}
-.tihaya{background:var(--paper-2)}
-tr.ещё{display:none}
-table.развёрнута tr.ещё{display:table-row}
-.показать{font:inherit;font-size:15px;color:var(--accent);background:none;border:0;border-bottom:1px dashed currentColor;cursor:pointer;padding:0;margin-top:14px}
-.tihaya .tbl table{background:var(--paper)}
 .band .eyebrow{color:var(--dark-muted)}
 .band .muted{color:var(--dark-muted)}
 .band .card{background:var(--dark-2);border-color:transparent}
@@ -184,29 +179,9 @@ footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;just
 .форма .подпись{font-size:13.5px;color:var(--ink-3);margin-top:14px}
 .форма .обяз{color:var(--accent)}
 .ловушка{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.согласие{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:14px;line-height:1.45;font-family:inherit;color:var(--ink-2);margin:4px 0 18px;max-width:46em;letter-spacing:0;text-transform:none}
-.согласие a{color:var(--accent)}
-.согласие input{margin-top:3px;flex:none;width:16px;height:16px;accent-color:var(--accent)}
 .копи{font:inherit;color:var(--accent);background:none;border:0;border-bottom:1px dashed currentColor;
         padding:0;cursor:pointer}
   .копи.готово{border-bottom-style:solid}
-
-.калк{margin-top:22px;border:1px solid var(--line);border-radius:14px;padding:18px 20px;background:var(--paper)}
-.калк label{display:block;font-weight:600;font-size:15px;margin-bottom:10px}
-.калк-ряд{display:flex;gap:14px;align-items:stretch;flex-wrap:wrap}
-.калк-ряд input{flex:0 0 200px;max-width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--paper-2);color:var(--ink)}
-.калк-отв{flex:1 1 300px;display:flex;align-items:center;padding:12px 14px;border-radius:10px;background:var(--paper-2);color:var(--muted);font-size:15px;line-height:1.45}
-.калк-отв.есть{color:var(--ink);background:rgba(194,65,12,.07)}
-.калк-отв b{color:var(--accent);white-space:nowrap}
-.калк-низ{margin:12px 0 0;color:var(--muted);font-size:14px}
-.магнит{border:1px solid var(--line);border-radius:14px;padding:24px;background:var(--paper);display:grid;grid-template-columns:1.3fr 1fr;gap:24px;align-items:center}
-.магнит h3{margin:0 0 8px;font-size:19px}
-.магнит p{margin:0;color:var(--muted);font-size:15px;line-height:1.5}
-.магнит form{display:flex;flex-direction:column;gap:10px}
-.магнит input[type=tel]{padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--paper-2);color:var(--ink)}
-.магнит .мелко{font-size:13px;color:var(--muted);line-height:1.45;font-weight:400}
-.магнит .мелко a{color:var(--accent)}
-@media(max-width:760px){.магнит{grid-template-columns:1fr;padding:20px}}
 </style>
 </head>
 <body>
@@ -221,8 +196,7 @@ footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;just
     <div class="eyebrow">Сверка сметы с проектом по госконтрактам</div>
     <h1>Вы строите по проекту. Платят вам по смете. <em>Разница — ваши деньги.</em></h1>
     <p class="lead">Сверяем каждую позицию сметы с чертежами и находим то, что вам придётся делать бесплатно, — до того, как вы это подписали.</p>
-    <div class="кнопки"><a class="btn" href="#zayavka"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14v18H5z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 8h6M9 12h6M9 16h4" fill="none" stroke="currentColor" stroke-width="2"/></svg>Проверить смету за 5 000 ₽</a> <a class="btn ghost" href="https://t.me/smeta_lupa_bot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4 3 11l5 2 2 6 3-4 5 4 3-15z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Telegram-бот</a></div>
-    <p class="muted" style="margin-top:14px;font-size:15px;max-width:34em">Пришлите номер закупки — документацию заберём из ЕИС сами. Ответ в тот же рабочий день.</p>
+    <div class="кнопки"><a class="btn" href="#zayavka"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14v18H5z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 8h6M9 12h6M9 16h4" fill="none" stroke="currentColor" stroke-width="2"/></svg>Оставить заявку</a> <a class="btn ghost" href="tel:+79931500747"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.2 2.2z" fill="currentColor"/></svg>Позвонить</a></div>
     
     </div>
   </div>
@@ -245,9 +219,9 @@ footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;just
 </header>
 
 <div class="wrap"><div class="facts">
-      <div class="fact"><b>3,34 млн ₽</b><span>расхождений с проектом в смете одного объекта — с листом и позицией по каждому</span></div>
+      <div class="fact"><b>3,34 млн ₽</b><span>расхождений с проектом в смете одного объекта — с листом и позицией по каждому</span></div>
       <div class="fact"><b>19 %</b><span>столько это от цены контракта того же объекта</span></div>
-      <div class="fact"><b>1 день</b><span>экспресс-проверка по номеру закупки, 5 000 ₽</span></div></div>
+      <div class="fact"><b>1 день</b><span>экспресс-проверка по номеру закупки, 5 000 ₽</span></div></div>
 
 
 <section id="pain"><div class="wrap">
@@ -260,11 +234,11 @@ footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;just
   </div>
 </div></section>
 
-<section id="report" class="tihaya"><div class="wrap">
+<section id="report" class="band"><div class="wrap">
   <div class="eyebrow">Что вы получаете</div>
   <h2>Таблица, с которой можно идти к заказчику</h2>
   <p class="muted" style="max-width:40em;margin-bottom:24px">Ниже — отчёт по смете с госзакупок; объект и заказчик не раскрываются. Каждая строка ведёт к листу проекта и позиции сметы.</p>
-  
+  <div class="itog"><b>3,34 млн ₽</b><span>найдено в смете одного объекта с ценой контракта 17,6 млн ₽ — это 19 % цены. Каждая строка ниже ведёт к листу проекта и позиции сметы.</span></div>
   <div class="tabs" role="tablist">
     <button class="tab" role="tab" aria-selected="true" data-tab="t1">Расхождения · 24</button>
     <button class="tab" role="tab" aria-selected="false" data-tab="t2">Не проверено · 12</button>
@@ -278,14 +252,13 @@ footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;just
         <tr><td>Насосная станция (поселковая)</td><td>Спецификация оборудования, лист 23, поз. 6 — 1 компл.</td><td>Раздел назван по станции, внутри только котлован и бетонное основание</td><td><span class="pill">в ПД есть, в смете нет</span></td><td class="num">1 компл.</td><td class="num">≈ 2,55 млн ₽ (по расчёту заказчика)</td></tr>
         <tr><td>Песчаное основание и обсыпка трубы</td><td>Общие указания, лист 1: основание 100 мм + слой 300 мм над верхом трубы</td><td>Слой 0,3 м от дна траншеи</td><td><span class="pill">объём занижен</span></td><td class="num">≈ −1 170 м³</td><td class="num">≈ 675 тыс. ₽ (материал)</td></tr>
         <tr><td>Колонны эстакады над коллектором</td><td>КМД, лист 3: колонны металлические К15-1, К17-1</td><td>Сборный железобетон, 10,78 м³</td><td><span class="pill">материал конструкции</span></td><td class="num">6 шт</td><td class="num">не определён — спецификация стали не текстовая</td></tr>
-        <tr class="ещё"><td>Снятие и восстановление дорожного покрытия</td><td>ПОС, лист 23: ПГС 0,2 м, ширина 3,5 м вдоль трассы</td><td>Ни одной позиции</td><td><span class="pill">в ПД есть, в смете нет</span></td><td class="num">по трассе</td><td class="num">не определён</td></tr>
-        <tr class="ещё"><td>Бетонные пригрузы против всплытия</td><td>Спецификация, прим. 4: через 6 м</td><td>Нет</td><td><span class="pill">в ПД есть, в смете нет</span></td><td class="num">≈ 594 шт</td><td class="num">не определён</td></tr>
-        <tr class="ещё"><td>Гидроиспытание полиэтиленового участка</td><td>ПОС, лист 34: технологическая схема</td><td>Учтено только на стальном участке</td><td><span class="pill">в ПД есть, в смете нет</span></td><td class="num">3 568,5 м</td><td class="num">не определён</td></tr>
-        <tr class="ещё"><td>Колодцы на напорной линии</td><td>Схема, лист 13: два колодца d2000</td><td>Один колодец d1500</td><td><span class="pill">количество и типоразмер</span></td><td class="num">−2 шт</td><td class="num">не определён</td></tr>
-        <tr class="ещё"><td>Отводы напорной линии</td><td>Спецификация, поз. 7–12: 11 шт</td><td>8 шт, один угол в проекте отсутствует</td><td><span class="pill">количество</span></td><td class="num">−3 шт</td><td class="num">≈ 9,5 тыс. ₽</td></tr>
+        <tr><td>Снятие и восстановление дорожного покрытия</td><td>ПОС, лист 23: ПГС 0,2 м, ширина 3,5 м вдоль трассы</td><td>Ни одной позиции</td><td><span class="pill">в ПД есть, в смете нет</span></td><td class="num">по трассе</td><td class="num">не определён</td></tr>
+        <tr><td>Бетонные пригрузы против всплытия</td><td>Спецификация, прим. 4: через 6 м</td><td>Нет</td><td><span class="pill">в ПД есть, в смете нет</span></td><td class="num">≈ 594 шт</td><td class="num">не определён</td></tr>
+        <tr><td>Гидроиспытание полиэтиленового участка</td><td>ПОС, лист 34: технологическая схема</td><td>Учтено только на стальном участке</td><td><span class="pill">в ПД есть, в смете нет</span></td><td class="num">3 568,5 м</td><td class="num">не определён</td></tr>
+        <tr><td>Колодцы на напорной линии</td><td>Схема, лист 13: два колодца d2000</td><td>Один колодец d1500</td><td><span class="pill">количество и типоразмер</span></td><td class="num">−2 шт</td><td class="num">не определён</td></tr>
+        <tr><td>Отводы напорной линии</td><td>Спецификация, поз. 7–12: 11 шт</td><td>8 шт, один угол в проекте отсутствует</td><td><span class="pill">количество</span></td><td class="num">−3 шт</td><td class="num">≈ 9,5 тыс. ₽</td></tr>
       </tbody>
     </table></div>
-    <button type="button" class="показать" data-показать>Показать все 24 строки</button>
     <div class="legend">«Не определён» значит, что расценки на эту работу в смете нет и переносить нечего — сумма появится после запроса цены у поставщика или по расчёту заказчика.</div>
   </div>
   <div class="panel" id="t2">
@@ -318,7 +291,7 @@ footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;just
 <section id="price"><div class="wrap">
   <div class="eyebrow">Цена</div>
   <h2>Цена и срок известны до начала работы</h2>
-  <p class="muted" style="max-width:44em;margin-bottom:24px">Тариф зависит от цены контракта и числа позиций сметы; в таблице — нижняя граница. Полные условия — в <a href="oferta.html" style="color:var(--ink);text-decoration-color:var(--line)">публичной оферте</a>.</p>
+  <p class="muted" style="max-width:44em;margin-bottom:24px">Тариф зависит от цены контракта и числа позиций сметы. В таблице — нижняя граница; точную цену и срок называем после бесплатной диагностики, до оплаты. Полные условия — в <a href="oferta.html" style="color:var(--accent)">публичной оферте</a>.</p>
   <div class="grid2" style="margin-bottom:28px">
     <div class="card"><h3>Экспресс-проверка сметы — 5 000 ₽, в день обращения</h3>
       <p>Нужен только номер закупки — документацию заберём из ЕИС сами. Смета проверяется сама против себя: объём в заголовке раздела против объёма, посчитанного внутри; разделы, заведённые без позиций; работы без материалов; арифметика, задвоенные позиции, аномалии цен. Проект не требуется, присылать ничего не нужно.</p>
@@ -340,14 +313,6 @@ footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;just
     </tbody>
   </table></div>
   <div class="legend">В таблице — нижняя граница: цена и срок зависят от числа позиций сметы. Точную цену и срок называем после бесплатной диагностики, до оплаты. Срочно, вдвое быстрее — плюс 50 %. Второй и последующие объекты того же заказчика — минус 20 %. Оплата по счёту, безналично, до начала работы. НДС не облагается: упрощённая система, п. 2 ст. 346.11 НК РФ.</div>
-  <div class="калк">
-    <label for="c-cena">Цена вашего контракта, млн ₽</label>
-    <div class="калк-ряд">
-      <input id="c-cena" type="number" min="0" step="0.1" inputmode="decimal" placeholder="например, 42">
-      <div id="c-otvet" class="калк-отв">Введите цену — покажем тариф и срок.</div>
-    </div>
-    <p class="калк-низ">Экспресс-проверка стоит 5 000 ₽ при любой цене контракта.</p>
-  </div>
   <div class="grid2" style="margin-top:24px">
     <div class="card"><h3>Если расхождений нет</h3><p>Это тоже результат: у вас на руках документ «проверено сплошь, упущений нет», и акты вы подписываете спокойно. Отдельным листом идёт то, что проверить не удалось, и почему — чаще всего причина в неполноте переданной документации.</p></div>
     <div class="card"><h3>Как платить</h3><p>Счёт выставляем в ответ на ваш запрос — после того, как назвали цену и вы согласились. Работаем по договору-оферте — отдельный договор подписывать не нужно, но по вашему запросу подпишем. По завершении — акт.</p></div>
@@ -372,7 +337,7 @@ footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;just
   </div>
 </div></section>
 
-<section class="tihaya"><div class="wrap">
+<section class="band"><div class="wrap">
   <div class="eyebrow">Почему сейчас, а не потом</div>
   <div class="grid2">
     <div class="card"><h3>Вопрос до начала работ</h3><p>Проект определяет объём работ, смета — их цену (ст. 743 ГК). Подрядчик обязан сообщить заказчику о несоответствии, как только его увидел (ст. 716 ГК). Письмо с таблицей до начала работ — это добросовестное уточнение документации, и заказчик обязан на него ответить.</p></div>
@@ -382,36 +347,16 @@ footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;just
 
 
 
-<section id="cheklist"><div class="wrap">
-  <div class="магнит">
-    <div>
-      <div class="eyebrow">Бесплатно</div>
-      <h3>Семь мест в смете, где упущения находятся чаще всего</h3>
-      <p>Разбор на три страницы: что за место, как оно выглядит в смете и как проверить его самому — без проекта, по одной смете. Файл откроется сразу после отправки, на следующей странице — без звонков и писем.</p>
-    </div>
-    <form action="https://formsubmit.co/zz_realt@mail.ru" method="POST">
-      <input type="hidden" name="_subject" value="ЧЕК-ЛИСТ — запрос с сайта">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://sverka-smet.ru/chek-list.html">
-      <div class="ловушка"><label>Не заполняйте это поле<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
-      <input type="tel" name="Телефон" required placeholder="Телефон, +7" autocomplete="tel">
-      <button class="btn" type="submit" style="justify-content:center">Получить чек-лист</button>
-      <label class="мелко"><input type="checkbox" name="Согласие" value="да" required style="margin-right:6px"> Согласен на обработку данных по <a href="politika.html" target="_blank" rel="noopener">политике</a>. Звонить без вашей просьбы не будем.</label>
-    </form>
-  </div>
-</div></section>
-
 <section id="faq"><div class="wrap">
   <div class="eyebrow">Вопросы, которые задают</div>
   <h2>Что спрашивают до того, как прислать документы</h2>
   <details><summary>Кто увидит нашу документацию?</summary><p>Только исполнитель проверки. Файлы не передаются третьим лицам, не публикуются и удаляются после сдачи отчёта. По запросу подписываем соглашение о конфиденциальности до получения файлов.</p></details>
   <details><summary>Заказчик скажет: «вы видели смету при заключении, возражений не было». Что тогда?</summary><p>Контракт сам предусматривает выявление несоответствий в ходе исполнения и обязывает подрядчика направить акт именно тогда. Механизм, установленный заказчиком, не может быть обращён против того, кто им пользуется. Эту формулировку смотрим по вашему контракту, а в отчёте видно, на какие листы проекта и позиции сметы в ней ссылаться.</p></details>
-  <details><summary>Сколько это стоит?</summary><p>По тарифу от цены контракта — <a href="#price" style="color:var(--ink);text-decoration-color:var(--line)">таблица выше</a>, от 30 000 ₽; один раздел — от 10 000 ₽. Если искать нечего — скажем на диагностике, ещё до счёта.</p></details>
-  <details><summary>Как оформляются отношения и документы?</summary><p>Работаем по <a href="oferta.html" style="color:var(--ink);text-decoration-color:var(--line)">публичной оферте</a>: оплата счёта означает принятие её условий, отдельный договор подписывать не нужно — но по запросу подпишем, как и соглашение о конфиденциальности до передачи файлов. Закрываемся актом. Исполнитель работает на упрощённой системе, поэтому НДС в счёте нет.</p></details>
+  <details><summary>Сколько это стоит?</summary><p>По тарифу от цены контракта — <a href="#price" style="color:var(--accent)">таблица выше</a>, от 30 000 ₽; один раздел — от 10 000 ₽. Точную цену и срок называем после бесплатной диагностики, до оплаты. Если искать нечего — скажем на диагностике, ещё до счёта.</p></details>
+  <details><summary>Как оформляются отношения и документы?</summary><p>Работаем по <a href="oferta.html" style="color:var(--accent)">публичной оферте</a>: оплата счёта означает принятие её условий, отдельный договор подписывать не нужно — но по запросу подпишем, как и соглашение о конфиденциальности до передачи файлов. Закрываемся актом. Исполнитель работает на упрощённой системе, поэтому НДС в счёте нет.</p></details>
   <details><summary>Нужен ли юрист?</summary><p>Для самой сверки не нужен. Вы получаете факты со ссылками на листы и позиции, и они же годятся приложением к письму или акту о несоответствии. Юрист нужен, если дело дошло до претензии; тогда у него уже будет вся фактура.</p></details>
   <details><summary>Коммерческие объекты, не только госконтракты?</summary><p>Да. Механика та же: проект против сметы. Меняется только то, на что ссылаемся в основании — контракт вместо 44-ФЗ.</p></details>
-  
+  <details><summary>А если расхождений нет?</summary><p>Это тоже результат: «упущений нет, проверено так-то» — с отдельным листом, что проверить не удалось и почему. С таким документом акты подписываются спокойно.</p></details>
 </div></section>
 
 
@@ -423,37 +368,63 @@ footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;just
     <input type="hidden" name="_subject" value="ЗАЯВКА С САЙТА — проверка сметы">
     <input type="hidden" name="_template" value="table">
     <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://sverka-smet.ru/spasibo.html">
+    <input type="hidden" name="_next" value="https://psd-sverka-audit.github.io/spasibo.html">
     <div class="ловушка"><label>Не заполняйте это поле<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
 
-    <div class="поле">
-      <label for="f-tel">Телефон <span class="обяз">*</span></label>
-      <input id="f-tel" name="Телефон" type="tel" required autocomplete="tel" placeholder="+7">
+    <div class="ряд">
+      <div class="поле">
+        <label for="f-org">Организация или ваше имя <span class="обяз">*</span></label>
+        <input id="f-org" name="Организация" type="text" required autocomplete="organization">
+      </div>
+      <div class="поле">
+        <label for="f-tel">Телефон <span class="обяз">*</span></label>
+        <input id="f-tel" name="Телефон" type="tel" required autocomplete="tel" placeholder="+7">
+      </div>
     </div>
 
     <div class="поле">
-      <label for="f-zak">Номер закупки в ЕИС <span class="обяз">*</span></label>
-      <input id="f-zak" name="Закупка" type="text" required placeholder="19 цифр. По коммерческому объекту — ссылка на документацию">
+      <label for="f-mail">Почта для ответа <span class="обяз">*</span></label>
+      <input id="f-mail" name="email" type="email" required autocomplete="email">
     </div>
 
-    <label class="согласие"><input type="checkbox" name="Согласие" value="да" required> Отправляя заявку, я соглашаюсь на обработку моих данных по <a href="politika.html" target="_blank" rel="noopener">политике обработки персональных данных</a> и принимаю условия <a href="oferta.html" target="_blank" rel="noopener">публичной оферты</a>.</label>
-      <button class="btn" type="submit" style="width:100%;justify-content:center">Отправить заявку</button>
-    <p class="подпись">Заявка уходит на почту исполнителя. Документы по этой форме не передаются — за ними напишем отдельно. Условия работы — <a href="oferta.html" style="color:var(--ink);text-decoration-color:var(--line)">публичная оферта</a>.</p>
+    <div class="поле">
+      <label for="f-zak">Номер закупки в ЕИС или ссылка на документацию</label>
+      <input id="f-zak" name="Закупка" type="text" placeholder="19 цифр, или ссылка на архив по коммерческому объекту">
+    </div>
+
+    <div class="поле">
+      <label for="f-st">На какой вы стадии</label>
+      <select id="f-st" name="Стадия">
+        <option value="">— выберите —</option>
+        <option>Срок подачи заявки ещё идёт</option>
+        <option>Контракт подписан, работы не начаты</option>
+        <option>Работы идут, акты подписываются</option>
+        <option>Коммерческий объект, не госзакупка</option>
+      </select>
+    </div>
+
+    <div class="поле">
+      <label for="f-txt">Что беспокоит по объекту</label>
+      <textarea id="f-txt" name="Комментарий" placeholder="Необязательно. Если уже видите расхождение — напишите, с него и начнём."></textarea>
+    </div>
+
+    <button class="btn" type="submit" style="width:100%;justify-content:center">Отправить заявку</button>
+    <p class="подпись">Заявка уходит на почту исполнителя. Документы по этой форме не передаются — за ними напишем отдельно. Условия работы — <a href="oferta.html" style="color:var(--accent)">публичная оферта</a>.</p>
   </form>
 </div></section>
 
 <section class="final"><div class="wrap">
   <div class="card">
-    <div><h2>Проверьте смету до того, как начнёте работы</h2><p class="muted">Пришлите номер закупки или ссылку на документацию — скажем, что нужно ещё и сколько это займёт. Цена и условия — <a href="#price" style="color:var(--ink);text-decoration-color:var(--line)">в таблице</a> и <a href="oferta.html" style="color:var(--ink);text-decoration-color:var(--line)">в оферте</a>.</p></div>
+    <div><h2>Проверьте смету до того, как начнёте работы</h2><p class="muted">Пришлите номер закупки или ссылку на документацию — скажем, что нужно ещё и сколько это займёт. Цена и условия — <a href="#price" style="color:var(--accent)">в таблице</a> и <a href="oferta.html" style="color:var(--accent)">в оферте</a>.</p></div>
     <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn" href="#zayavka"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14v18H5z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 8h6M9 12h6M9 16h4" fill="none" stroke="currentColor" stroke-width="2"/></svg>Оставить заявку</a><a class="btn ghost" href="tel:+79931500747"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.2 2.2z" fill="currentColor"/></svg>Позвонить</a></div>
   </div>
   <footer>
     <div>Сверка сметы с проектом по госконтрактам. Строительные подрядчики, госконтракты 44-ФЗ и коммерческие объекты. Пример отчёта — закупка 2026 года, объект и заказчик не раскрываются.<br><span style="opacity:.75">Редакция страницы: 14.09.2026 · условия — оферта редакции 2 от 14.09.2026</span></div>
-    <div><a href="tel:+79931500747">8 (993) 150-07-47</a> · <button type="button" class="копи" data-копи="zz_realt@mail.ru" title="нажмите, чтобы скопировать адрес">zz_realt@mail.ru</button> · <a href="oferta.html">Публичная оферта</a> · <a href="politika.html">Политика обработки персональных данных</a></div>
+    <div><a href="tel:+79931500747">8 (993) 150-07-47</a> · <button type="button" class="копи" data-копи="zz_realt@mail.ru" title="нажмите, чтобы скопировать адрес">zz_realt@mail.ru</button> · <a href="oferta.html">Публичная оферта</a></div>
   </footer>
 </div></section>
 
-<div class="sticky"><a class="btn" href="#zayavka"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14v18H5z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 8h6M9 12h6M9 16h4" fill="none" stroke="currentColor" stroke-width="2"/></svg>Проверить смету за 5 000 ₽</a></div>
+<div class="sticky"><a class="btn" href="#zayavka"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14v18H5z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 8h6M9 12h6M9 16h4" fill="none" stroke="currentColor" stroke-width="2"/></svg>Оставить заявку</a></div>
 
 <script>
 (function(){
@@ -519,35 +490,6 @@ document.querySelectorAll('.копи').forEach(function(b){
       } else { вручную(); }
     });
   });
-})();
-</script>
-<script>
-(function(){var b=document.querySelector('[data-показать]');if(!b)return;
-b.addEventListener('click',function(){var tb=b.closest('.panel').querySelector('table');
-tb.classList.toggle('развёрнута');
-b.textContent=tb.classList.contains('развёрнута')?'Свернуть':'Показать все 24 строки';});})();
-</script>
-
-<script>
-(function(){
-  var поле=document.getElementById('c-cena'), отв=document.getElementById('c-otvet');
-  if(!поле) return;
-  var шкала=[{до:25,цена:'от 30\u00a0000\u00a0₽',срок:'до 5 рабочих дней'},
-             {до:60,цена:'от 55\u00a0000\u00a0₽',срок:'до 7 рабочих дней'},
-             {до:150,цена:'от 90\u00a0000\u00a0₽',срок:'до 10 рабочих дней'},
-             {до:400,цена:'от 150\u00a0000\u00a0₽',срок:'по расчёту'},
-             {до:1e9,цена:'от 220\u00a0000\u00a0₽',срок:'по расчёту'}];
-  function счёт(){
-    var v=parseFloat(String(поле.value||'').replace(',','.'));
-    if(isNaN(v)||v<=0){отв.className='калк-отв';отв.textContent='Введите цену — покажем тариф и срок.';return;}
-    if(v<10){отв.className='калк-отв есть';
-      отв.innerHTML='Контракт меньше 10\u00a0млн\u00a0₽ — считаем по разделам: <b>от 10\u00a0000\u00a0₽</b> за раздел сметы, 3 рабочих дня. Или экспресс-проверка за 5\u00a0000\u00a0₽.';return;}
-    for(var i=0;i<шкала.length;i++){
-      if(v<=шкала[i].до){отв.className='калк-отв есть';
-        отв.innerHTML='Полная сверка с проектом — <b>'+шкала[i].цена+'</b> — '+шкала[i].срок+'. Точную цену называем после бесплатной диагностики.';return;}
-    }
-  }
-  поле.addEventListener('input',счёт);
 })();
 </script>
 </body>
