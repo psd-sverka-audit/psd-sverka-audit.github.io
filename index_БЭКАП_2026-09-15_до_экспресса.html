@@ -76,8 +76,6 @@ section{padding:64px 0}
 @media (max-width:860px){section{padding:44px 0}}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 @media (max-width:860px){.grid3{grid-template-columns:1fr}}
-.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-@media (max-width:860px){.grid2{grid-template-columns:1fr}}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:20px}
 .card h3{margin-bottom:8px}
 .card p{color:var(--ink-2);font-size:15.5px}
@@ -263,23 +261,12 @@ footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;just
       </tbody>
     </table></div>
   </div>
-  <p style="margin-top:28px"><a class="btn small ghost" href="akt-obrazec.pdf" target="_blank" rel="noopener">Посмотреть акт целиком (PDF, 11 страниц)</a></p>
-  <p class="muted" style="max-width:44em;font-size:15px">Настоящий акт по объекту с госзакупок, обезличенный: наименование объекта, заказчик и проектная организация удалены, шифр проекта заменён на условный. Числа, ссылки на листы и позиции сметы — подлинные.</p>
 </div></section>
 
 <section id="price"><div class="wrap">
   <div class="eyebrow">Цена</div>
   <h2>Цена и срок известны до начала работы</h2>
   <p class="muted" style="max-width:44em;margin-bottom:24px">Тариф зависит от цены контракта и числа позиций сметы. В таблице — нижняя граница; точную цену и срок называем после бесплатной диагностики, до оплаты. Полные условия — в <a href="oferta.html" style="color:var(--accent)">публичной оферте</a>.</p>
-  <div class="grid2" style="margin-bottom:28px">
-    <div class="card"><h3>Экспресс-проверка сметы — 5 000 ₽, в день обращения</h3>
-      <p>Нужен только номер закупки — документацию заберём из ЕИС сами. Смета проверяется сама против себя: объём в заголовке раздела против объёма, посчитанного внутри; разделы, заведённые без позиций; работы без материалов; арифметика, задвоенные позиции, аномалии цен. Проект не требуется, присылать ничего не нужно.</p>
-      <p class="muted">На школе с ценой контракта свыше 100 млн ₽ такая проверка дала расхождение объёмов в двух разделах на 4,5 млн ₽ и ещё один раздел, заведённый без единой позиции, — без единого листа проекта.</p></div>
-    <div class="card"><h3>Полная сверка с проектом — от 30 000 ₽</h3>
-      <p>Смета сверяется с проектной документацией построчно, все позиции подряд. Находит то, чего в смете нет вовсе: работы, материалы и оборудование, предусмотренные проектом и не учтённые сметой. Тариф — в таблице ниже.</p>
-      <p class="muted">На той же школе сверх экспресс-проверки нашлась ведомость малых архитектурных форм — около 150 единиц, в смете ни одной позиции. Из сметы этого не видно: её там просто нет.</p></div>
-  </div>
-  <p class="muted" style="max-width:44em;margin-bottom:24px">Стоимость экспресс-проверки засчитывается в полную сверку, если заказать её в течение месяца.</p>
   <div class="tbl"><table>
     <thead><tr><th>Цена контракта</th><th>Стоимость проверки</th><th>Срок</th></tr></thead>
     <tbody>
@@ -292,13 +279,13 @@ footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;just
     </tbody>
   </table></div>
   <div class="legend">В таблице — нижняя граница: цена и срок зависят от числа позиций сметы. Точную цену и срок называем после бесплатной диагностики, до оплаты. Срочно, вдвое быстрее — плюс 50 %. Второй и последующие объекты того же заказчика — минус 20 %. Оплата по счёту, безналично, до начала работы. НДС не облагается: упрощённая система, п. 2 ст. 346.11 НК РФ.</div>
-  <div class="grid2" style="margin-top:24px">
+  <div class="grid3" style="margin-top:24px;grid-template-columns:repeat(2,1fr)">
     <div class="card"><h3>Если расхождений нет</h3><p>Это тоже результат: у вас на руках документ «проверено сплошь, упущений нет», и акты вы подписываете спокойно. Отдельным листом идёт то, что проверить не удалось, и почему — чаще всего причина в неполноте переданной документации.</p></div>
     <div class="card"><h3>Как платить</h3><p>Счёт выставляем в ответ на ваш запрос — после того, как назвали цену и вы согласились. Работаем по договору-оферте — отдельный договор подписывать не нужно, но по вашему запросу подпишем. По завершении — акт.</p></div>
   </div>
-  <p style="margin-top:24px"><a class="btn" href="https://wa.me/79931500747?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D1%80%D0%BE%D1%88%D1%83%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D1%82%D1%8C%20%D1%81%D0%BC%D0%B5%D1%82%D1%83.%20%D0%9D%D0%BE%D0%BC%D0%B5%D1%80%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%3A%20"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L3 21l1.5-5.3A8.5 8.5 0 1 1 21 12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Написать в WhatsApp — нужен только номер закупки</a>
+  <p style="margin-top:24px"><a class="btn" href="https://wa.me/79931500747?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5.%20%D0%9F%D1%80%D0%BE%D1%88%D1%83%20%D0%B2%D1%8B%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%20%D1%81%D1%87%D1%91%D1%82%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D1%83%20%D1%81%D0%BC%D0%B5%D1%82%D1%8B.%0A%D0%9E%D1%80%D0%B3%D0%B0%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%3A%20%0A%D0%98%D0%9D%D0%9D%3A%20%0A%D0%9D%D0%BE%D0%BC%D0%B5%D1%80%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B8%D0%BB%D0%B8%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%3A%20%0A%D0%A6%D0%B5%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%B0%3A%20"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L3 21l1.5-5.3A8.5 8.5 0 1 1 21 12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Запросить счёт в WhatsApp</a>
   <a class="btn small ghost" href="oferta.html" style="margin-left:12px">Читать оферту</a></p>
-  <p class="muted" style="max-width:44em;font-size:15px">От вас нужна одна строка — номер закупки. Остальное наша забота: документацию заберём из ЕИС, счёт на вашу организацию подготовим сами и пришлём в ответ, в течение рабочего дня; если чего-то не хватит для счёта, спросим одним сообщением. Если удобнее почтой — адрес <button type="button" class="копи" data-копи="zz_realt@mail.ru" title="нажмите, чтобы скопировать адрес">zz_realt@mail.ru</button>, в письме тоже достаточно номера закупки.</p>
+  <p class="muted" style="max-width:44em;font-size:15px">В сообщении уже готовы поля: организация, ИНН, номер закупки, цена контракта. Счёт на вашу организацию выставим в ответ, в течение рабочего дня. Если удобнее почтой — адрес <button type="button" class="копи" data-копи="zz_realt@mail.ru" title="нажмите, чтобы скопировать адрес">zz_realt@mail.ru</button>, те же четыре строки.</p>
 </div></section>
 
 <section id="how"><div class="wrap">
@@ -314,7 +301,7 @@ footer{padding:24px 0 40px;font-size:13.5px;color:var(--ink-3);display:flex;just
 
 <section class="band"><div class="wrap">
   <div class="eyebrow">Почему сейчас, а не потом</div>
-  <div class="grid2">
+  <div class="grid3" style="grid-template-columns:repeat(2,1fr)">
     <div class="card"><h3>Вопрос до начала работ</h3><p>Проект определяет объём работ, смета — их цену (ст. 743 ГК). Подрядчик обязан сообщить заказчику о несоответствии, как только его увидел (ст. 716 ГК). Письмо с таблицей до начала работ — это добросовестное уточнение документации, и заказчик обязан на него ответить.</p></div>
     <div class="card"><h3>Позже — дороже</h3><p>Пока работы не начаты, расхождение — вопрос к документации. После того как объём выполнен и принят, тот же разговор становится спором о деньгах, и в нём вы уже слабее: работы приняты, цена подтверждена вашей подписью.</p></div>
   </div>
