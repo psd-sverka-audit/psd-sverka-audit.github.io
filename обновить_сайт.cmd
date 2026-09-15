@@ -8,6 +8,10 @@ if exist ".git\index.lock" (
   del /f /q ".git\index.lock"
 )
 
+rem --- ubrat bekapy i chernoviki iz papki sayta (na sayt oni ne dolzhny uezzhat) ---
+if not exist "..\_backup_site" mkdir "..\_backup_site"
+for %%F in (index_*.html oferta_*.html politika_*.html spasibo_*.html cheklist_*.html *_2026-*.cmd) do move /y "%%F" "..\_backup_site\" >nul 2>&1
+
 git add -A
 if errorlevel 1 goto :oshibka
 
