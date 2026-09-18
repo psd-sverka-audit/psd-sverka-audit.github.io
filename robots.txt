@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /spasibo.html
+Disallow: /oplata.html
+
+Sitemap: https://sverka-smet.ru/sitemap.xml
