@@ -15,14 +15,23 @@ for %%F in (index_*.html oferta_*.html politika_*.html spasibo_*.html cheklist_*
 git add -A
 if errorlevel 1 goto :oshibka
 
+rem --- 19.09.2026: kommit mozhet byt uzhe sdelan (Cowork), togda tolko push ---
 git diff --cached --quiet
 if not errorlevel 1 (
-  echo [i] Izmeneniy net - publikovat nechego.
-  goto :konec
+  git fetch -q origin
+  for /f %%N in ('git rev-list --count @{u}..HEAD') do set NEPUSH=%%N
+  if "%NEPUSH%"=="0" (
+    echo [i] Izmeneniy net i vse kommity uzhe na sayte - publikovat nechego.
+    goto :konec
+  )
+  echo [i] Novyh izmeneniy net, no est %NEPUSH% neopublikovannyh kommitov - publikuyu ih.
+  goto :push
 )
 
 git commit -m "site update %date% %time%"
 if errorlevel 1 goto :oshibka
+
+:push
 
 git push
 if errorlevel 1 goto :oshibka
