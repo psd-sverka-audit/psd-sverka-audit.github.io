@@ -18,36 +18,75 @@
 <meta property="og:description" content="Политика обработки персональных данных сайта sverka-smet.ru: какие данные собираются в заявке, зачем и сколько хранятся.">
 <meta name="twitter:card" content="summary">
 <!-- /SEO-BLOK -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&family=PT+Sans+Narrow:wght@400;700&family=PT+Mono&display=swap&subset=cyrillic">
 <style>
-:root{--ground:#eef0f2;--paper:#ffffff;--paper-2:#f6f7f8;--ink:#10161c;--ink-2:#4a5866;--ink-3:#7a8794;--line:#d3d9de;--accent:#c2410c}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--ground:#0e1418;--paper:#161e25;--paper-2:#1b242c;--ink:#eef1f3;--ink-2:#b3bec8;--ink-3:#8492a0;--line:#2a353f;--accent:#e2673a}}
-:root[data-theme="dark"]{--ground:#0e1418;--paper:#161e25;--paper-2:#1b242c;--ink:#eef1f3;--ink-2:#b3bec8;--ink-3:#8492a0;--line:#2a353f;--accent:#e2673a}
+:root{--ground:#f3f0e7;--paper:#fcfbf7;--paper-2:#f2efe6;--ink:#1a2530;--ink-2:#434f5a;--ink-3:#66717b;--hair:#c9ccc4;--line:#c9ccc4;
+ --accent:#1f4468;--accent-ink:#fff;--accent-soft:#e2e9f0;--red:#b0301c;--dark:#1a2530;--dark-2:#243140;--dark-text:#f3f0e7;--dark-muted:#b9c0c6;--ok:#2d6a45;--warn:#1f4468;
+ --f-head:"PT Sans Narrow","Arial Narrow",sans-serif;--f-body:"PT Sans",Arial,sans-serif;--f-num:"PT Mono",Consolas,monospace}
 *{box-sizing:border-box}
-body{margin:0;background:var(--ground);color:var(--ink);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.6;padding-inline:20px;padding-block:0 64px}
-.wrap{max-width:760px;margin:0 auto}
-nav{border-bottom:1px solid var(--line);margin-bottom:36px}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-.logo{font-family:"Unbounded",Arial,sans-serif;font-weight:900;font-size:18px;letter-spacing:.04em;color:var(--ink);text-decoration:none}
-nav a.back{color:var(--ink-2);text-decoration:none;font-size:15px;font-weight:500}
-nav a.back:hover{color:var(--ink)}
-h1{font-family:"Unbounded",Arial,sans-serif;font-weight:900;font-size:clamp(24px,4.4vw,36px);line-height:1.15;margin:0 0 8px;text-wrap:balance}
-h2{font-family:"Unbounded",Arial,sans-serif;font-weight:700;font-size:clamp(17px,2.4vw,21px);line-height:1.25;margin:34px 0 10px;text-wrap:balance}
+html{scroll-behavior:smooth}
+body{margin:0;padding:0!important;color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;background-color:var(--ground);
+ background-image:linear-gradient(#e2e0d5 1px,transparent 1px),linear-gradient(90deg,#e2e0d5 1px,transparent 1px),linear-gradient(#ebe9e0 1px,transparent 1px),linear-gradient(90deg,#ebe9e0 1px,transparent 1px);
+ background-size:50px 50px,50px 50px,10px 10px,10px 10px}
+.лист{max-width:1000px;margin:30px auto;border:2px solid var(--ink);outline:1px solid var(--ink);outline-offset:6px;padding-bottom:8px}
+@media (max-width:720px){.лист{margin:10px 8px;outline-offset:3px;border-width:1.5px}}
+.wrap{max-width:780px;margin:0 auto;padding:0 28px}
+@media (max-width:720px){.wrap{padding:0 16px}}
+nav{background:var(--ground);border-bottom:1.5px solid var(--ink);margin:0 0 44px}
+nav .wrap{max-width:none;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding-block:8px}
+.logo{font-family:var(--f-head)!important;font-weight:700;text-transform:uppercase!important;letter-spacing:.05em!important;font-size:16px!important;color:var(--ink);text-decoration:none;line-height:1.2}
+@media (max-width:720px){.logo{font-size:13px!important}}
+nav a.back{color:var(--ink-2);text-decoration:none;font-size:15px;white-space:nowrap}
+nav a.back:hover{color:var(--red)}
+nav .btn.small{white-space:nowrap}
+@media (max-width:720px){nav .btn.small{padding:8px 10px;font-size:13.5px}}
+h1,h2,h3{font-family:var(--f-head);font-weight:700;text-wrap:balance}
+h1{font-size:clamp(30px,4.6vw,46px);line-height:1.05;text-transform:uppercase;margin:0 0 14px}
+h2{font-size:clamp(21px,2.6vw,27px);line-height:1.15;margin:38px 0 10px}
+h3{font-size:21px;line-height:1.2;margin:0 0 8px}
 p{margin:0 0 12px}
 ul{margin:0 0 14px;padding-left:22px}
 li{margin-bottom:7px}
-hr{border:0;border-top:1px solid var(--line);margin:28px 0}
-b{font-weight:600}
-.tablewrap{overflow-x:auto;margin:14px 0}
-table{border-collapse:collapse;width:100%;font-size:15px}
-th,td{border:1px solid var(--line);padding:9px 12px;text-align:left}
-th{background:var(--paper-2);font-weight:600}
-td:last-child{font-family:"IBM Plex Mono",Consolas,monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+li::marker{color:var(--ink-3)}
+hr{border:0;border-top:1px solid var(--hair);margin:30px 0}
+b,strong{font-weight:700}
 a{color:var(--accent)}
-footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:var(--ink-3);font-size:14px}
+.tablewrap{overflow-x:auto;margin:16px 0;border:1.5px solid var(--ink);background:var(--paper)}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{border:0;border-bottom:1px solid var(--hair);border-right:1px solid var(--hair);padding:10px 12px;text-align:left;vertical-align:top}
+th:last-child,td:last-child{border-right:0}
+tr:last-child td{border-bottom:0}
+th{background:var(--paper-2);font-family:var(--f-head);font-weight:700;font-size:13px;letter-spacing:.07em;text-transform:uppercase;border-bottom:1.5px solid var(--ink)}
+td:last-child{font-family:var(--f-num);font-variant-numeric:tabular-nums;white-space:nowrap}
+.eyebrow{font-family:var(--f-num);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.eyebrow:after{content:"";flex:0 0 56px;height:1px;background:currentColor}
+section{padding:0 0 48px}
+.lead{color:var(--ink-2)}
+.card{background:var(--paper);border:1.5px solid var(--ink);padding:22px 24px}
+.card p{color:var(--ink-2);font-size:16px;margin:0}
+.card a{color:var(--accent)!important}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#fff;border:1.5px solid var(--ink);border-radius:0;padding:14px 22px;font-weight:700;font-size:16px;text-decoration:none;font-family:inherit;line-height:1.2;margin:4px 0;transition:background-color .25s ease,color .25s ease,transform .25s cubic-bezier(.22,1,.36,1)}
+.btn:hover{background:var(--ink);transform:translateY(-1px)}
+.btn.small{font-size:14.5px;padding:9px 14px}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--ground)}
+@media (max-width:520px){.btn.ghost[style*="margin-left"]{margin-left:0!important}}
+footer{border-top:1.5px solid var(--ink);margin-top:44px;padding:16px 0 20px;color:var(--ink-3);font-size:14px}
+footer a{color:var(--ink)}
+.связи{margin-top:8px}
+.копи{font:inherit;color:var(--accent);background:none;border:0;border-bottom:1px dashed currentColor;padding:0;cursor:pointer}
+.копи.готово{border-bottom-style:solid}
+@media (prefers-reduced-motion:no-preference){
+ .лист>*:not(nav){animation:вход .7s cubic-bezier(.22,1,.36,1) both}
+ .лист>*:nth-child(3){animation-delay:.08s}
+ .лист>*:nth-child(4){animation-delay:.16s}
+ @keyframes вход{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+}
 </style>
 </head>
 <body>
+<div class="лист">
 <nav><div class="wrap"><a class="logo" href="index.html" style="font-size:15px;letter-spacing:0;text-transform:none">Сверка сметы с проектом по госконтрактам</a><a class="back" href="index.html">← на главную</a></div></nav>
 <div class="wrap">
 <h1>ПОЛИТИКА ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ</h1>
@@ -98,7 +137,8 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:v
 <li>Электронная почта: zz_realt@mail.ru</li>
 <li>Телефон: +7 (993) 150-07-47</li></ul>
 
-<footer>Настоящая редакция действует с 25 сентября 2026 года.</footer>
+<footer>Настоящая редакция действует с 25 сентября 2026 года.<div class="связи"><a href="tel:+79931500747">+7 (993) 150-07-47</a> · <a href="https://wa.me/79931500747" rel="noopener">WhatsApp</a> · <a href="https://t.me/smeta_lupa_bot" rel="noopener">Telegram-бот «Смета под лупой»</a></div></footer>
+</div>
 </div>
 </body>
 </html>
