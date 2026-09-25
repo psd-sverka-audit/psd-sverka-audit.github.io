@@ -6,3 +6,6 @@ cheklist_*.html
 *БЭКАП*
 _backup_site/
 *_2026-*.cmd
+_*/
+ПРАВКИ_*.md
+_исходники/
